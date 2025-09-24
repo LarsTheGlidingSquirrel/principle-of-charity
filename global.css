@@ -1,0 +1,22 @@
+.two-column-with-wrap {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.heading {
+	font-size: large;
+}
+
+section {
+	display: flex; 
+	flex-direction: column; 
+	align-items: center;
+	gap: 2rem;
+}
+
+@media only screen and (max-width: 40rem) {
+	.two-column-with-wrap {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" style="min-height: 100dvh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My First Webpage</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="components/speech-bubble.js" type="module"></script>
+    <script src="components/thought-bubble.js" type="module"></script>
+    <script src="components/squirrel-illustration.js" type="module"></script>
+    <script src="components/squirrel-conversation.js" type="module"></script>
+    <script src="components/important-block.js" type="module"></script>
+    <script src="components/paragraph-block.js" type="module"></script>
+  </head>
+
+  <body
+    style="
+      position: relative;
+      margin: 0;
+      background-color: #f8f2f2ff;
+      font-family: 'EB Garamond';
+    "
+  >
+    <!-- minmax(X, Y) - Below X a horizontal scroll bar will appear. Above Y empty space will be added to the left and right of the content. -->
+    <div
+      style="display: grid; grid-template-columns: 1fr minmax(20rem, 64rem) 1fr"
+    >
+      <main
+        style="
+          grid-column-start: 2;
+          grid-column-end: 3;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8rem; /* Sections gap */
+        "
+      >
+        <section style="gap: 0">
+          <span>On the</span>
+          <h2
+            style="
+              font-size: 3rem;
+              margin: 0;
+              font-family: 'Tagesschrift', system-ui;
+            "
+          >
+            Principle of Charity
+          </h2>
+          <span
+            >or interpreting others in the most <b>reasonable</b> and
+            <b>charitable</b> way</span
+          >
+        </section>
+        <section>
+          <paragraph-block>
+            A community of squirrels talk about collecting food for the winter.
+          </paragraph-block>
+        </section>
+        <section>
+          <squirrel-conversation
+            messages='[
+              {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+              {"leftOrRight":"left", "message":"We need to protect them better this year"}
+            ]'
+          ></squirrel-conversation>
+          <!-- <div class="heading" style="text-align: center;">What could this mean?</div> -->
+          <div
+            style="
+              gap: 1rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <!-- <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 1rem"> -->
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                flex-wrap: wrap;
+              "
+            >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                >Charly wants me to feel bad because my stash got robbed
+                <span slot="heading">Attack</span></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                >Yes, half of the food was lost but only a quarter was stolen.
+                The rest rotted like we expected.
+                <span slot="heading">Mistake</span></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                >Charly is curious to know what I think<span slot="heading"
+                  >Curious</span
+                ></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                >Charly wants squirrels to stand guard in winter
+                <span slot="heading">Possible consequence</span></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                >There is a group that wants to prohibit all forms of sharing
+                food with others - Charly probably belongs to them<span
+                  slot="heading"
+                  >Belongs to group</span
+                ></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                >Charly just wants to sound smart in front of the others<span
+                  slot="heading"
+                  >Self display</span
+                ></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                ><span slot="heading">Care</span>Charly cares about our safety
+                during the next winter and wants to help</thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                ><span slot="heading">Fear</span>Charly had a tough winter and
+                fears the next one</thought-bubble
+              >
+            </div>
+            <span style="padding-top: 4rem">...</span>
+          </div>
+        </section>
+        <section>
+          <important-block
+            >There are many possible interpretations</important-block
+          >
+          <paragraph-block>
+            Not only based on the words but also on
+            <b>tone</b>, <b>body language</b>, <b>setting</b>, ...
+          </paragraph-block>
+          <paragraph-block>
+            Also, your <b>past experience</b>, <b>personality</b> and
+            <b>what you know about the other</b> affect your interpretations.
+          </paragraph-block>
+        </section>
+        <section>
+          <paragraph-block>
+            <span slot="heading">Hold back</span>
+            ... and don't react based on the first thing that comes to your
+            mind. Even if it feels like it must be true.
+          </paragraph-block>
+          <squirrel-conversation
+            messages='[
+            {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+            {"leftOrRight":"left", "message":"We need to protect them better this year "},
+            {"leftOrRight":"right", "message":"Standing guard in winter will be very unpleasant and cost a lot of additional calories. "},
+            {"leftOrRight":"left", "message":"What? No, that is not what I meant! "}  
+            ]'
+          ></squirrel-conversation>
+          <paragraph-block>
+            If we <b>first allow other possibilities</b>, we might
+            <b>realize we are not quite so sure</b> any more about or initial
+            interpretations.
+          </paragraph-block>
+        </section>
+        <section>
+          <paragraph-block>
+            <span slot="heading">Open to be wrong</span>
+            Make some room in your head for the possibility that what you think
+            is wrong. Then, it becomes easier to find other interpretations.
+          </paragraph-block>
+          <thought-bubble style="max-width: 20rem">
+            I think Charly wants us to stand guard in winter. But, maybe I am
+            wrong and he has a different idea instead.
+          </thought-bubble>
+        </section>
+        <section>
+          <important-block number="1"
+            >Explore possible interpretations</important-block
+          >
+          <paragraph-block>
+            ... by asking questions, thinking and getting perspectives from
+            others.
+          </paragraph-block>
+        </section>
+        <section>
+          <paragraph-block
+            ><span slot="heading">Ask questions</span>For example, ask them to
+            give more details.</paragraph-block
+          >
+          <squirrel-conversation
+            messages='[
+          {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+          {"leftOrRight":"left", "message":"We need to protect them better this year "},
+          {"leftOrRight":"right", "message":"How do you intend to protect our food stashes better?"},
+          {"leftOrRight":"left", "message":"I was thinking about building new hiding places that have narrow entries to prevent others from seeing the hiding place."}  
+          ]'
+          ></squirrel-conversation>
+          <paragraph-block>
+            Or, start with an interpretation you think most likely and ask them
+            about it.
+          </paragraph-block>
+          <squirrel-conversation
+            messages='[
+              {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+              {"leftOrRight":"left", "message":"We need to protect them better this year "},
+              {"leftOrRight":"right", "message":"You seem angry to me. What are you angry about?"},
+              {"leftOrRight":"left", "message":"Don`t worry! I am not angry with you"},
+              {"leftOrRight":"left", "message":"I just want to make sure we are better prepared this year"}  
+              ]'
+          ></squirrel-conversation>
+        </section>
+        <section>
+          <paragraph-block>
+            <span slot="heading">Think</span>
+            Take some time to think about how to interpret something and listen
+            to your subconscious.<br />
+            During a conversation it might not be possible to pause that long.
+            Instead, you can either ask questions or think loudly and let the
+            other be a part of your thinking. Plus, you can often come back to a
+            conversation you had earlier.
+          </paragraph-block>
+        </section>
+        <section>
+          <paragraph-block>
+            <span slot="heading">Get help from others</span>
+            Seek out the help of others because they might have an outside
+            perspective or know the other person better than you.
+          </paragraph-block>
+          <squirrel-conversation
+            messages='[
+              {"leftOrRight":"right", "message":"Do you think Charly is angry with me because my stash got robbed?"},
+              {"leftOrRight":"left", "message":"No, don`t worry!"},
+              {"leftOrRight":"left", "message":"I have know him since I was a child and he often gets a little intense when he talks about something he cares about"}
+              ]'
+          ></squirrel-conversation>
+        </section>
+        <section>
+          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+            <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+              <span slot="heading">Bias</span>
+              Watch out! While interpreting, we tend be biased and think in ways
+              we are already familiar.<br />
+              For example, we might stick to a certain view because it is the
+              first thing that came to our mind.<br />
+              <a target="_blank" href="https://yourbias.is/"
+                >Bias overview</a
+              ></paragraph-block
+            >
+            <!-- <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+              <span slot="heading">Humility</span>
+              Our initial interpretations can be wrong even though we might feel
+              sure about them initially.</paragraph-block
+            > -->
+            <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+              <span slot="heading">Open mind</span>
+              Try to also find interpretations that do not come naturally to
+              you.
+            </paragraph-block>
+            <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+              <span slot="heading">Listen</span>
+              When somebody is talking try to really listen and put your
+              attention towards it.
+            </paragraph-block>
+          </div>
+        </section>
+        <!-- <section>
+          <paragraph-block>
+            <span slot="heading">Check if you understood</span>
+            If questions alone are not enough, try to explain your
+            interpretation and ask if you are correct.
+          </paragraph-block>
+          <squirrel-conversation
+            messages='[
+          {"leftOrRight":"left", "message":"..."},
+           {"leftOrRight":"right", "message":"Did I understand you correctly?"},
+          {"leftOrRight":"right", "message":"Because we lost half of our food reserves last year due to theft and decay you argue that building new & more hidden stashes this year will make sure we wont run short of food this winter?"},
+          {"leftOrRight":"left", "message":"Yes! You got it!"}  
+          ]'
+          ></squirrel-conversation>
+        </section> -->
+        <section>
+          <important-block>Be charitable</important-block>
+          <paragraph-block>... when you interpret others. </paragraph-block>
+          <div style="display: flex; flex-wrap: wrap; gap: 2rem">
+            <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+              <span slot="heading">Assume good intentions</span>
+              Assume the other is not acting malicious and with good intentions.
+              Especially, if you do not know them well enough personally.
+              Something that can be interpreted as a personal attack can also be
+              interpreted as a signal of feeling bad.
+            </paragraph-block>
+            <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+              <span slot="heading">Learning from one another</span>
+              Assume there is something you can learn. Even if there is nothing
+              to learn directly from what the other says, you can continue their
+              thoughts and find something valuable that way.
+            </paragraph-block>
+            <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+              <span slot="heading">Find common ground</span>
+              Try to figure out what both of you have in common first instead of
+              focusing on the differences.
+            </paragraph-block>
+          </div>
+        </section>
+        <section>
+          <paragraph-block>
+            <span slot="heading">Forgive mistakes</span>
+            Don't get caught up with unimportant details even if you spot a
+            mistake or a logical fallacy.
+          </paragraph-block>
+          <squirrel-conversation
+            messages='[
+              {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+              {"leftOrRight":"left", "message":"We need to protect them better this year"},
+              {"leftOrRight":"right", "message":"That is incorrect!"},
+              {"leftOrRight":"right", "message":"Only a quarter of the food was stolen"},
+              {"leftOrRight":"left", "message":"Yeah, whatever"},
+              {"leftOrRight":"left", "message":"We still need to protect them"}
+            ]'
+          ></squirrel-conversation>
+          <paragraph-block>
+            Instead, focus your attention on what is important.
+          </paragraph-block>
+        </section>
+        <section>
+          <important-block>First understand, then react</important-block>
+          <paragraph-block>
+            Now that you understand what the other wants to say you can
+            formulate an answer.
+          </paragraph-block>
+        </section>
+        <section>
+          <paragraph-block>
+            <span slot="heading">Be constructive</span>
+            Think about what you could say to make sure both of you leave the
+            conversation better of than before.
+          </paragraph-block>
+          <squirrel-conversation
+            messages='[
+          {"leftOrRight":"left", "message":"..."},
+           {"leftOrRight":"right", "message":"Did I understand you correctly?"},
+          {"leftOrRight":"right", "message":"Because we lost half of our food reserves last year due to theft and decay you argue that building new & more hidden stashes this year will make sure we wont run short of food this winter?"},
+          {"leftOrRight":"left", "message":"Yes! You got it!"},
+          {"leftOrRight":"right", "message":"Nice! Thank you for bringing this up."},
+          {"leftOrRight":"right", "message":"Let`s see if we can find some new hiding spots first and then talk to the others about your idea."}
+          ]'
+          ></squirrel-conversation>
+          <paragraph-block>
+            <span slot="heading">Disagree</span>
+            If you disagree you can now find a good counter argument that
+            addresses their point<br />The Principle of Charity is still helpful
+            if you end up disagreeing.
+          </paragraph-block>
+          <paragraph-block>
+            <span slot="heading">Learn</span>
+            Maybe you learned something or discovered an argument that
+            influenced your view.
+          </paragraph-block>
+          <paragraph-block>
+            <span slot="heading">Step away</span>
+            Maybe you just want to not engage further now that you understood
+            it.
+          </paragraph-block>
+        </section>
+        <!-- <section>
+          <important-block>First understand, then react</important-block>
+        </section> -->
+      </main>
+    </div>
+
+    <template id="thought-bubble-template">
+      <div style="color: white; font-weight: 700; position: relative">
+        <img
+          src="./thought-background.svg"
+          style="
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            padding-top: 10px;
+          "
+        />
+        <div
+          style="
+            color: white;
+            position: relative;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 0.7rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding: 1.5rem;
+          "
+        >
+          <span
+            style="
+              background-color: #f9f4f4ff;
+              border-color: #114b67b0;
+              border-width: 3px;
+              border-style: solid;
+              border-radius: 10px;
+              color: rgb(90, 90, 90);
+              padding: 0.2rem;
+              font-family: 'Tagesschrift', system-ui;
+              display: none;
+              position: absolute;
+              top: 0;
+            "
+            class="thought-blubble-heading"
+            ><slot name="heading"></slot
+          ></span>
+          <slot></slot>
+        </div>
+      </div>
+    </template>
+    <template id="speech-bubble-template">
+      <div
+        style="
+          position: relative;
+          width: fit-content;
+          color: white;
+          font-weight: 700;
+        "
+      >
+        <div
+          style="
+            border-radius: 5px;
+            background-color: #2c6c1280;
+            height: calc(100% - 3px);
+            width: calc(100% - 3px);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          "
+          class="speech-bubble-background"
+        ></div>
+        <div
+          style="
+            border-radius: 5px;
+            background-color: #2c6c1280;
+            height: calc(100% - 3px);
+            width: calc(100% - 3px);
+            position: absolute;
+            top: 0;
+            right: 0;
+          "
+          class="speech-bubble-background"
+        ></div>
+        <div
+          style="color: white; position: relative; padding: 0.7rem; margin: 0"
+        >
+          <slot></slot>
+        </div>
+      </div>
+    </template>
+    <template id="squirrel-conversation-template">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 0.7rem;
+          max-width: 40rem;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-left: 4rem;
+            margin-right: 4rem;
+          "
+          class="speech-bubble"
+        ></div>
+        <div style="display: flex; justify-content: space-between; gap: 3rem">
+          <squirrel-illustration></squirrel-illustration>
+          <squirrel-illustration></squirrel-illustration>
+        </div>
+      </div>
+    </template>
+    <template id="important-block-template">
+      <div
+        style="
+          background-color: #ab7e59ff;
+          border-radius: 5px;
+          color: white;
+          padding-top: 0.5rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        "
+      >
+        <div style="">The Principle of Charity says ...</div>
+        <div
+          style="
+            font-size: x-large;
+            font-family: 'Tagesschrift', system-ui;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+          "
+        >
+          <slot></slot>
+        </div>
+      </div>
+    </template>
+    <template id="paragraph-block-template">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 2rem;
+        "
+      >
+        <h3
+          style="
+            background-color: #ab7e59ff;
+            border-radius: 5px;
+            font-weight: 700;
+            text-align: center;
+            padding: 0.5rem;
+            color: white;
+            display: none;
+            font-size: large;
+            margin: 0;
+          "
+          class="paragraph-block-heading"
+        >
+          <slot name="heading"></slot>
+        </h3>
+        <p style="margin: 0">
+          <slot></slot>
+        </p>
+      </div>
+    </template>
+    <svg
+      style="
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+      "
+    >
+      <defs id="defs2">
+        <filter
+          style="color-interpolation-filters: sRGB"
+          id="grain-filter"
+          x="0"
+          y="0"
+          width="1"
+          height="1"
+        >
+          <feTurbulence
+            id="feTurbulence65"
+            type="fractalNoise"
+            baseFrequency="8.2407104677060126"
+            numOctaves="1"
+            seed="0"
+          />
+          <feColorMatrix
+            id="feColorMatrix67"
+            type="matrix"
+            values="1000.0000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1000.0000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1000.0000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 "
+          />
+        </filter>
+        <filter
+          style="color-interpolation-filters: sRGB"
+          id="paper-filter"
+          x="-0.011476236"
+          y="-0.012898589"
+          width="1.0229525"
+          height="1.0257972"
+        >
+          <feTurbulence
+            numOctaves="2"
+            baseFrequency="0.063"
+            id="feTurbulence177-1-6"
+          />
+          <feColorMatrix
+            values="0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 -10 1"
+            id="feColorMatrix177-7-7"
+          />
+          <feGaussianBlur
+            stdDeviation="1"
+            result="result1"
+            id="feGaussianBlur177-7-1"
+          />
+          <feTurbulence
+            numOctaves="3"
+            baseFrequency="0.031"
+            type="fractalNoise"
+            result="result0"
+            id="feTurbulence178-1-5"
+          />
+          <feColorMatrix
+            result="result2"
+            values="1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 1.0000000 -0.50000000 "
+            id="feColorMatrix178-1-5"
+          />
+          <feComposite
+            operator="in"
+            in2="result2"
+            in="result1"
+            id="feComposite178-5-4"
+          />
+          <feComposite
+            in2="SourceGraphic"
+            operator="atop"
+            id="feComposite179-9-0"
+            result="fbSourceGraphic"
+          />
+          <feColorMatrix
+            result="fbSourceGraphicAlpha"
+            in="fbSourceGraphic"
+            values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+            id="feColorMatrix179-7-2"
+          />
+          <feTurbulence
+            id="feTurbulence179-7-6"
+            type="fractalNoise"
+            baseFrequency="0.04"
+            numOctaves="5"
+            seed="0"
+            result="result4"
+          />
+          <feDisplacementMap
+            id="feDisplacementMap179-6-0"
+            in="fbSourceGraphic"
+            in2="result4"
+            yChannelSelector="G"
+            xChannelSelector="R"
+            scale="10"
+            result="result3"
+          />
+          <feDiffuseLighting
+            id="feDiffuseLighting179-7-6"
+            lighting-color="#e9e6d7"
+            diffuseConstant="1"
+            surfaceScale="2"
+            result="result1"
+            in="result4"
+          >
+            <feDistantLight
+              id="feDistantLight179-3-1"
+              azimuth="235"
+              elevation="40"
+            />
+          </feDiffuseLighting>
+          <feComposite
+            id="feComposite180-6-1"
+            operator="in"
+            in="result3"
+            in2="result1"
+            result="result2"
+          />
+          <feComposite
+            id="feComposite181-5-1"
+            in2="result1"
+            result="result5"
+            operator="arithmetic"
+            k1="1.7"
+            k2="0"
+            k3="0"
+            k4="0"
+          />
+          <feBlend
+            id="feBlend181-6-7"
+            in="result5"
+            in2="result3"
+            mode="normal"
+          />
+        </filter>
+      </defs>
+      <rect
+        fill="white"
+        width="100%"
+        height="100%"
+        style="opacity: 0.4; filter: url(#grain-filter)"
+      />
+      <rect
+        fill="white"
+        width="100%"
+        height="100%"
+        style="opacity: 0.05; filter: url(#paper-filter)"
+      />
+    </svg>
+  </body>
+</html>
