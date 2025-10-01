@@ -12,8 +12,8 @@ class ThoughtBubble extends HTMLElement {
     );
     headingSlot.addEventListener("slotchange", () => {
       const heading = this.shadowRoot.querySelector(".thought-blubble-heading");
-      heading.style.display =
-        headingSlot.assignedNodes().length === 0 ? "none" : "block";
+      heading.style.visibility =
+        headingSlot.assignedNodes().length === 0 ? "hidden" : "visible";
     });
   }
 }

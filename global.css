@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 .two-column-with-wrap {
   display: flex;
   width: 100%;

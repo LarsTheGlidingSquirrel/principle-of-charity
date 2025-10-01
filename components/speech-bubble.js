@@ -1,39 +1,3 @@
-// const template = document.createElement("template");
-
-// template.innerHTML = `
-//   <div style="position: relative; width: fit-content; color: white">
-//     <div
-//       style="
-//         border-radius: 5px;
-//         background-color: #2c6c1280;
-//         height: calc(100% - 3px);
-//         width: calc(100% - 3px);
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//       "
-//       class="speech-bubble-background"
-//     ></div>
-//     <div
-//       style="
-//         border-radius: 5px;
-//         background-color: #2c6c1280;
-//         height: calc(100% - 3px);
-//         width: calc(100% - 3px);
-//         position: absolute;
-//         top: 0;
-//         right: 0;
-//       "
-//       class="speech-bubble-background"
-//     ></div>
-//     <div
-//       style="color: white; position: relative; padding: 0.7rem; margin: 0"
-//     >
-//       <slot></slot>
-//     </div>
-//   </div>
-// `;
-
 const colors = {
   green: "#2c6c1280",
   blue: "#114b6780",
@@ -68,7 +32,8 @@ class SpeechBubble extends HTMLElement {
         ".speech-bubble-background"
       );
       backgrounds.forEach(
-        (background) => (background.style.backgroundColor = colors[newValue])
+        // (background) => (background.style.backgroundColor = colors[newValue])
+        (background) => (background.style.borderColor = colors[newValue])
       );
     }
   }
