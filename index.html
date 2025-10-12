@@ -42,24 +42,49 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 8rem; /* Sections gap */
+          gap: 14rem; /* Sections gap */
         "
       >
-        <section style="gap: 0">
-          <span>The</span>
-          <h2
-            style="
-              font-size: 3rem;
-              margin: 0;
-              font-family: 'Tagesschrift', system-ui;
-            "
+        <section style="">
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
           >
-            Principle of Charity
-          </h2>
-          <span
+            <span>The</span>
+            <h2
+              style="
+                font-size: 3rem;
+                margin: 0;
+                font-family: 'Tagesschrift', system-ui;
+                text-align: center;
+              "
+            >
+              Principle of Charity
+            </h2>
+          </div>
+          <div>When somebody says something I will ...</div>
+          <h3 class="emphasis-block">
+            Acknowledge there are many possible ways to interpret what was said
+          </h3>
+          <h3 class="emphasis-block">
+            Explore possible interpretations with an open mind by asking
+            questions, careful listening & thinking
+          </h3>
+          <h3 class="emphasis-block">
+            Interpret charitably by assuming good intentions & practicing
+            empathy
+          </h3>
+          <h3 class="emphasis-block">
+            Answer based on a reasonable & charitable interpretation
+          </h3>
+          <h3 class="emphasis-block">
+            Be constructive and try to make everyone come out better off than
+            before
+          </h3>
+          <!-- <span
             >or interpreting others in the most <b>reasonable</b> and
             <b>charitable</b> way</span
-          >
+          > -->
+          <div>Let's explore this principle using an example!</div>
         </section>
         <section>
           <paragraph-block>
@@ -175,20 +200,22 @@
             messages='[
             {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
             {"leftOrRight":"left", "message":"We need to protect them better this year "},
-            {"leftOrRight":"right", "message":"Standing guard in winter will be very unpleasant and cost a lot of additional calories. "},
+            {"leftOrRight":"right", "message":"Standing guard in winter will be very unpleasant and cost a lot of additional calories.", "thumb": "down"},
             {"leftOrRight":"left", "message":"What? No, that is not what I meant! "}  
             ]'
           ></squirrel-conversation>
           <paragraph-block>
-            Also, don`t let your emotions take over and say something that is
-            not constructive.
+            <p class="emphasis-block">
+              Also, don`t let your emotions take over and say something that is
+              not constructive
+            </p>
           </paragraph-block>
           <squirrel-conversation
             messages='[
             {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
             {"leftOrRight":"left", "message":"We need to protect them better this year"},
-            {"leftOrRight":"right", "message":"Stop it! I know that I messed up last winter"},
-            {"leftOrRight":"right", "message":"But it was your idea to hide our food there so you are to blame"},
+            {"leftOrRight":"right", "message":"Stop it! I know that I messed up last winter", "thumb": "down"},
+            {"leftOrRight":"right", "message":"But it was your idea to hide our food there so you are to blame", "thumb": "down"},
             {"leftOrRight":"left", "message":"🤬💣💥"}  
             ]'
           ></squirrel-conversation>
@@ -196,9 +223,18 @@
 
         <section>
           <paragraph-block>
-            <span slot="heading">Be open to being wrong</span>
-            Make some room in your head for the possibility that what you think
-            is wrong and that there might be better interpretations.
+            <span
+              slot="heading"
+              style="
+                font-family: 'Tagesschrift', system-ui;
+                background: transparent;
+              "
+              >Be open to being wrong</span
+            >
+            <span class="emphasis-block">
+              Make some room in your head for the possibility that what you
+              think is wrong and that there might be better interpretations.
+            </span>
           </paragraph-block>
           <thought-bubble style="max-width: 20rem">
             My first thought is that Charly wants us to stand guard in winter.
@@ -227,7 +263,7 @@
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
-          {"leftOrRight":"right", "message":"How can we protect our food stashes better?"},
+          {"leftOrRight":"right", "message":"How can we protect our food stashes better?", "thumb": "up"},
           {"leftOrRight":"left", "message":"I was thinking about building new hiding places that have narrow entries to prevent others from seeing the hiding place."}  
           ]'
           ></squirrel-conversation>
@@ -238,7 +274,7 @@
           <squirrel-conversation
             messages='[
               {"leftOrRight":"left", "message":"..."},
-              {"leftOrRight":"right", "message":"You seem angry to me. What are you angry about?"},
+              {"leftOrRight":"right", "message":"You seem angry to me. What are you angry about?", "thumb": "up"},
               {"leftOrRight":"left", "message":"Don`t worry, I am not angry"},
               {"leftOrRight":"left", "message":"I just want to make sure we are better prepared this year"}  
               ]'
@@ -286,7 +322,7 @@
           <squirrel-conversation
             messages='[
               {"leftOrRight":"right", "message":"Hey Charly"},
-              {"leftOrRight":"right", "message":"I thought about what you said earlier and ..."}
+              {"leftOrRight":"right", "message":"I thought about what you said earlier and ...", "thumb": "up"}
               ]'
           ></squirrel-conversation>
         </section>
@@ -298,7 +334,7 @@
           </paragraph-block>
           <squirrel-conversation
             messages='[
-              {"leftOrRight":"right", "message":"Do you think Charly is angry with me because my stash got robbed?"},
+              {"leftOrRight":"right", "message":"Do you think Charly is angry with me because my stash got robbed?", "thumb": "up"},
               {"leftOrRight":"left", "message":"Oh, don`t worry!"},
               {"leftOrRight":"left", "message":"I have know him since I was a child and he often gets a little intense when he talks about something he cares about"}
               ]'
@@ -341,6 +377,23 @@
               <paragraph-block>
                 Instead, focus on understanding the individual.
               </paragraph-block>
+            </paragraph-block>
+            <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
+              <span slot="heading">Don't think in black and white</span>
+              We sometimes only think in extremes and neglect the grey area in
+              between.<br />
+              We might assume there is a clear right and wrong.
+              <thought-bubble>
+                There must be one explanation that explains everything clearly
+              </thought-bubble>
+              Instead, explanations can be mixture and incomplete.<br /><br />
+              We might assume others are either fully on or side or completely
+              against everything we do
+              <thought-bubble
+                >Charly does not like me and is opposed to anything I
+                say</thought-bubble
+              >
+              But they could be anything in between.
             </paragraph-block>
             <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
               <span slot="heading">Learn from one another</span>
@@ -410,8 +463,8 @@
             messages='[
               {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
               {"leftOrRight":"left", "message":"We need to protect them better this year"},
-              {"leftOrRight":"right", "message":"That is incorrect!"},
-              {"leftOrRight":"right", "message":"Only a quarter of the food was stolen"},
+              {"leftOrRight":"right", "message":"That is incorrect!", "thumb": "down"},
+              {"leftOrRight":"right", "message":"Only a quarter of the food was stolen", "thumb": "down"},
               {"leftOrRight":"left", "message":"Yeah, whatever"},
               {"leftOrRight":"left", "message":"We still need to protect them"}
             ]'
@@ -446,12 +499,12 @@
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
-          {"leftOrRight":"right", "message":"Did I understand you correctly?"},
-          {"leftOrRight":"right", "message":"You want us to make a plan so we do not run short on food this winter."},
-          {"leftOrRight":"right", "message":"You suggest we build new (and more hidden) hiding places so that less food will be stolen."},
+          {"leftOrRight":"right", "message":"Did I understand you correctly?", "thumb": "up"},
+          {"leftOrRight":"right", "message":"You want us to make a plan so we do not run short on food this winter.", "thumb": "up"},
+          {"leftOrRight":"right", "message":"You suggest we build new (and more hidden) hiding places so that less food will be stolen.", "thumb": "up"},
           {"leftOrRight":"left", "message":"Yes! You got it!"},
-          {"leftOrRight":"right", "message":"Nice! Thank you for caring about our safety and sharing your idea with us."},
-          {"leftOrRight":"right", "message":"Let`s talk to the others about your idea."}
+          {"leftOrRight":"right", "message":"Nice! Thank you for caring about our safety and sharing your idea with us.", "thumb": "up"},
+          {"leftOrRight":"right", "message":"Let`s talk to the others about your idea.", "thumb": "up"}
           ]'
           ></squirrel-conversation>
         </section>
@@ -464,7 +517,7 @@
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
-          {"leftOrRight":"right", "message":"I think we all agree that we had not enough food last winter"},
+          {"leftOrRight":"right", "message":"I think we all agree that we had not enough food last winter", "thumb": "up"},
           {"leftOrRight":"right", "message":"... and that we should make a plan for next winter as soon as possible"}
           ]'
           ></squirrel-conversation>
@@ -479,7 +532,14 @@
             >If you still want to persuade you can do so later.</paragraph-block
           >
         </section>
-
+        <section>
+          <paragraph-block>
+            <span slot="heading">A perfect solution might not exist</span>
+            Don't reject solutions because there is an downside or uncertainty.
+            Try to aim for a better solution instead of a perfect solution and
+            accept that there will be uncertainty.
+          </paragraph-block>
+        </section>
         <section>
           <paragraph-block>
             <span slot="heading">Disagree</span>
@@ -490,9 +550,9 @@
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
-           {"leftOrRight":"right", "message":"I agree with you that we need to ensure that we have enough food this winter"},
-          {"leftOrRight":"right", "message":"But, I think building new hiding places will be a lot of effort and keeping them secret will be hard"},
-          {"leftOrRight":"right", "message":"Instead, I think we should focus this additional energy on collecting more food"}
+           {"leftOrRight":"right", "message":"I agree with you that we need to ensure that we have enough food this winter", , "thumb": "up"},
+          {"leftOrRight":"right", "message":"But, I think building new hiding places will be a lot of effort and keeping them secret will be hard", "thumb": "up"},
+          {"leftOrRight":"right", "message":"Instead, I think we should focus this additional energy on collecting more food", "thumb": "up"}
           ]'
           ></squirrel-conversation>
         </section>

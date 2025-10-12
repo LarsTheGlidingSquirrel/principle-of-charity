@@ -19,6 +19,17 @@ section {
 	gap: 2rem;
 }
 
+.emphasis-block {
+	background-color: #ab7e59ff;
+	border-radius: 5px;
+	font-weight: 600;
+	text-align: center;
+	padding: 0.5rem;
+	color: white;
+	font-size: medium;
+	margin: 0;
+}
+
 @media only screen and (max-width: 40rem) {
 	.two-column-with-wrap {
 		flex-direction: column;
