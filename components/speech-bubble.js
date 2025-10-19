@@ -32,8 +32,8 @@ class SpeechBubble extends HTMLElement {
         ".speech-bubble-background"
       );
       backgrounds.forEach(
-        // (background) => (background.style.backgroundColor = colors[newValue])
-        (background) => (background.style.borderColor = colors[newValue])
+        (background) => (background.style.backgroundColor = colors[newValue])
+        // (background) => (background.style.borderColor = colors[newValue])
       );
     }
   }

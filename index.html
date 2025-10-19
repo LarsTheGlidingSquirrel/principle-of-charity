@@ -20,6 +20,7 @@
     <script src="components/squirrel-conversation.js" type="module"></script>
     <script src="components/important-block.js" type="module"></script>
     <script src="components/paragraph-block.js" type="module"></script>
+    <script src="components/takeaway-block.js" type="module"></script>
   </head>
 
   <body
@@ -42,10 +43,10 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 14rem; /* Sections gap */
+          gap: 18rem; /* Sections gap */
         "
       >
-        <section style="">
+        <section id="principle-of-charity">
           <div
             style="display: flex; flex-direction: column; align-items: center"
           >
@@ -63,7 +64,8 @@
           </div>
           <div>When somebody says something I will ...</div>
           <h3 class="emphasis-block">
-            Acknowledge there are many possible ways to interpret what was said
+            Remind myself that there are many possible ways to interpret what
+            was said
           </h3>
           <h3 class="emphasis-block">
             Explore possible interpretations with an open mind by asking
@@ -86,10 +88,12 @@
           > -->
           <div>Let's explore this principle using an example!</div>
         </section>
-        <section>
+        <section id="example-setting">
           <paragraph-block>
-            Example: A community of squirrels talk about collecting food for the
-            winter.
+            Example:
+            <div class="heading">
+              A community of squirrels talk about collecting food for the winter
+            </div>
           </paragraph-block>
         </section>
         <section>
@@ -120,28 +124,21 @@
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                >Charly wants squirrels to stand guard in winter
+                <span slot="heading">Consequence</span></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
                 >Charly wants me to feel bad because my stash got robbed
                 <span slot="heading">Attack</span></thought-bubble
               >
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
-                >Yes, half of the food was lost but only a quarter was stolen.
-                The rest rotted like we expected.
+                >Yes, half of the food was lost but only a quarter was stolen -
+                The rest rotted like we expected
                 <span slot="heading">Mistake</span></thought-bubble
-              >
-              <thought-bubble
-                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
-                color="green"
-                >Charly is curious to know what I think<span slot="heading"
-                  >Curious</span
-                ></thought-bubble
-              >
-              <thought-bubble
-                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
-                color="green"
-                >Charly wants squirrels to stand guard in winter
-                <span slot="heading">Possible consequence</span></thought-bubble
               >
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
@@ -150,6 +147,13 @@
                 food with others - Charly probably belongs to them<span
                   slot="heading"
                   >Belongs to group</span
+                ></thought-bubble
+              >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                >Charly is curious to know what I think<span slot="heading"
+                  >Curious</span
                 ></thought-bubble
               >
               <thought-bubble
@@ -173,6 +177,12 @@
                 ><span slot="heading">Fear</span>Charly had a tough winter and
                 fears the next one</thought-bubble
               >
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                ><span slot="heading">Involvement</span>Charly wants to be
+                involved in the planning</thought-bubble
+              >
             </div>
             <span style="padding-top: 4rem">...</span>
           </div>
@@ -191,47 +201,41 @@
           </paragraph-block>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Hold back</span>
-            ... and don't react based on the first thing that comes to your
+          <div class="heading">Hold back</div>
+          <takeaway-block>
+            Don't answer immediately based on the first thing that comes to your
             mind. Even if it feels like it must be true.
-          </paragraph-block>
+          </takeaway-block>
           <squirrel-conversation
             messages='[
-            {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
-            {"leftOrRight":"left", "message":"We need to protect them better this year "},
-            {"leftOrRight":"right", "message":"Standing guard in winter will be very unpleasant and cost a lot of additional calories.", "thumb": "down"},
-            {"leftOrRight":"left", "message":"What? No, that is not what I meant! "}  
-            ]'
+          {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+          {"leftOrRight":"left", "message":"We need to protect them better this year "},
+          {"leftOrRight":"right", "message":"Standing guard in winter will be very unpleasant and cost a lot of additional calories.", "thumb": "down"},
+          {"leftOrRight":"left", "message":"What? No, that is not what I meant! "}  
+          ]'
           ></squirrel-conversation>
-          <paragraph-block>
-            <p class="emphasis-block">
-              Also, don`t let your emotions take over and say something that is
-              not constructive
-            </p>
-          </paragraph-block>
+          <takeaway-block>
+            Don`t let your emotions take over and say something that is not
+            constructive
+          </takeaway-block>
           <squirrel-conversation
             messages='[
-            {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
-            {"leftOrRight":"left", "message":"We need to protect them better this year"},
-            {"leftOrRight":"right", "message":"Stop it! I know that I messed up last winter", "thumb": "down"},
-            {"leftOrRight":"right", "message":"But it was your idea to hide our food there so you are to blame", "thumb": "down"},
-            {"leftOrRight":"left", "message":"🤬💣💥"}  
-            ]'
+          {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+          {"leftOrRight":"left", "message":"We need to protect them better this year"},
+          {"leftOrRight":"right", "message":"Stop it! I know that I messed up last winter", "thumb": "down"},
+          {"leftOrRight":"right", "message":"But it was your idea to hide our food there so you are to blame", "thumb": "down"},
+          {"leftOrRight":"left", "message":"🤬💣💥"}  
+          ]'
           ></squirrel-conversation>
+          <takeaway-block>
+            Remember that there are many possible interpretations
+          </takeaway-block>
         </section>
 
         <section>
+          <span class="heading">Be open to being wrong</span>
           <paragraph-block>
-            <span
-              slot="heading"
-              style="
-                font-family: 'Tagesschrift', system-ui;
-                background: transparent;
-              "
-              >Be open to being wrong</span
-            >
-            <span class="emphasis-block">
+            <span>
               Make some room in your head for the possibility that what you
               think is wrong and that there might be better interpretations.
             </span>
@@ -240,37 +244,42 @@
             My first thought is that Charly wants us to stand guard in winter.
             But, maybe I am wrong and he has a different plan.
           </thought-bubble>
-          <paragraph-block>
-            If we <b>first allow other possibilities</b>, we might
-            <b>realize we are not quite so sure</b> any more about or initial
-            interpretations.
-          </paragraph-block>
+          <takeaway-block>
+            If we first allow other possibilities, we might realize we are not
+            quite so sure any more about or initial interpretations
+          </takeaway-block>
         </section>
         <section>
-          <important-block number="1"
-            >Explore possible interpretations</important-block
-          >
-          <paragraph-block>
-            Try to find new interpretations and look into those that you already
-            have.
-          </paragraph-block>
+          <important-block>Explore possible interpretations</important-block>
+          Keep a set of possible interpretations in your head and try to improve
+          it
+          <takeaway-block>Try to find new interpretations</takeaway-block>
+          <takeaway-block>
+            Try to figure out if your interpretations are true or false
+          </takeaway-block>
+          <!-- Keep in mind that the truth lies within the other person -->
+          <!-- <takeaway-block>
+            Look into those that you already have.
+          </takeaway-block> -->
+          <!-- Your goal should be 
+          Keep a set of possible interpretations in your head. Try to figure out
+          which interpretations are most likely true. -->
         </section>
         <section>
-          <paragraph-block
-            ><span slot="heading">Ask questions</span>Ask them to give more
-            details.</paragraph-block
-          >
+          <h3 class="heading">Ask questions</h3>
+          <takeaway-block>Ask them to give more details</takeaway-block>
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
           {"leftOrRight":"right", "message":"How can we protect our food stashes better?", "thumb": "up"},
-          {"leftOrRight":"left", "message":"I was thinking about building new hiding places that have narrow entries to prevent others from seeing the hiding place."}  
+          {"leftOrRight":"left", "message":"I was thinking about building new hiding places that have narrow entries to prevent others from seeing the hiding place"}  
           ]'
           ></squirrel-conversation>
-          <paragraph-block>
-            Or, start with an interpretation you think most likely and ask them
-            about it.
-          </paragraph-block>
+          <p>or</p>
+          <takeaway-block>
+            Start with an interpretation you think most likely and ask them
+            about it
+          </takeaway-block>
           <squirrel-conversation
             messages='[
               {"leftOrRight":"left", "message":"..."},
@@ -279,21 +288,43 @@
               {"leftOrRight":"left", "message":"I just want to make sure we are better prepared this year"}  
               ]'
           ></squirrel-conversation>
+          <p>
+            We are trying to figure out what the other wants to communicate. So
+            getting information directly from them is the most accurate
+            information we can get.
+
+            <!-- By asking questions we can find new interpretations and
+            figure out if our interpretations are true. Since we are trying to
+            figure out what the other wants to communicate getting direct
+            feedback from them is the most accurate information we can get. . So
+            asking them to explain something in more detail should be the first
+            approach. -->
+          </p>
+          <takeaway-block>
+            Asking questions is often the best approach to figure out what
+            somebody wants to communicate
+          </takeaway-block>
         </section>
         <section>
+          <div class="heading">Listen</div>
           <paragraph-block>
-            <span slot="heading">Listen</span>
-            When somebody is talking try to listen carefully and put your focus
-            on understanding what they say instead of on coming up with an
-            answer.
+            When somebody is talking or you read a message by them try to ...
+          </paragraph-block>
+          <takeaway-block
+            >Listen carefully and put your focus on understanding what they say
+            instead of on coming up with an answer</takeaway-block
+          >
+          <paragraph-block>
+            Also try to pay attention to body language, tone, ... which can make
+            up a big part of what somebody is trying to communicate.
           </paragraph-block>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Think</span>
+          <div class="heading">Think</div>
+          <takeaway-block>
             Take some time to think about how to interpret something and listen
-            to your subconscious thoughts and feelings.
-          </paragraph-block>
+            to your subconscious thoughts and feelings
+          </takeaway-block>
           <div style="display: flex; gap: 2rem">
             <thought-bubble style="max-width: 25rem"
               >Charly seems angry to me and I feel attacked. But I don't know
@@ -314,24 +345,33 @@
           </paragraph-block>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Come back to a conversation</span>
+          <div class="heading">Come back to a conversation</div>
+          <takeaway-block>
             You can resume a conversation later after you had some time to think
-            about what the other said and how to interpret it.
-          </paragraph-block>
+            about what the other said and how to interpret it
+          </takeaway-block>
           <squirrel-conversation
             messages='[
               {"leftOrRight":"right", "message":"Hey Charly"},
               {"leftOrRight":"right", "message":"I thought about what you said earlier and ...", "thumb": "up"}
               ]'
           ></squirrel-conversation>
+          <p>Also, pausing a conversation can be helpful in many ways:</p>
+          <p>
+            You might come back to a conversation with new energy and a fresh
+            perspective
+          </p>
+          <p>
+            When a conversation became emotional (for example anger building up)
+            having a pause can give some room for these emotions to settle
+          </p>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Get help from others</span>
+          <div class="heading">Get help from others</div>
+          <takeaway-block>
             Seek out the help of others because they might have an outside
             perspective or know something you don't.
-          </paragraph-block>
+          </takeaway-block>
           <squirrel-conversation
             messages='[
               {"leftOrRight":"right", "message":"Do you think Charly is angry with me because my stash got robbed?", "thumb": "up"},
@@ -342,15 +382,16 @@
         </section>
         <!-- All mindsets here that do not clearly belong to "being charitable" -->
         <section>
+          <p class="heading">While exploring possible interpretations ...</p>
           <div style="display: flex; gap: 2rem; flex-wrap: wrap">
             <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
-              <span slot="heading">Have an open mind</span>
+              <takeaway-block>Have an open mind</takeaway-block>
               Try to also find interpretations that do not come naturally to
               you. Even if they seem implausible first, don't reject them
               immediately and try to find a version that seems reasonable.
             </paragraph-block>
             <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
-              <span slot="heading">Acknowledge your bias</span>
+              <takeaway-block>Acknowledge your bias</takeaway-block>
               Watch out! While interpreting, we tend be biased and think in ways
               we are already familiar.<br />
               For example, we might stick to a certain view because it is the
@@ -360,12 +401,12 @@
               ></paragraph-block
             >
             <!-- <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
-              <span slot="heading">Humility</span>
+              <takeaway-block>Humility</takeaway-block>
               Our initial interpretations can be wrong even though we might feel
               sure about them initially.</paragraph-block
             > -->
             <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
-              <span slot="heading">Don't think in boxes</span>
+              <takeaway-block>Don't think in boxes</takeaway-block>
               We can be quick to put others in boxes or associate them with
               groups.
               <thought-bubble style="max-width: 30rem"
@@ -379,7 +420,7 @@
               </paragraph-block>
             </paragraph-block>
             <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
-              <span slot="heading">Don't think in black and white</span>
+              <takeaway-block>Don't think in black and white</takeaway-block>
               We sometimes only think in extremes and neglect the grey area in
               between.<br />
               We might assume there is a clear right and wrong.
@@ -396,7 +437,7 @@
               But they could be anything in between.
             </paragraph-block>
             <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
-              <span slot="heading">Learn from one another</span>
+              <takeaway-block>Learn from one another</takeaway-block>
               Assume there is something you (and they) can learn.
               <!-- Even if there is nothing
               to learn directly from what the other says, you can continue their
@@ -406,7 +447,7 @@
         </section>
         <!-- <section>
           <paragraph-block>
-            <span slot="heading">Check if you understood</span>
+            <div class="heading">Check if you understood</div>
             If questions alone are not enough, try to explain your
             interpretation and ask if you are correct.
           </paragraph-block>
@@ -433,13 +474,14 @@
           >
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Assume good intentions</span>
+          <div class="heading">Assume good intentions</div>
+          <takeaway-block>
             Assume the other is not acting malicious and with good intentions.
-            Especially, if you do not know them well enough personally.
+
             <!-- Something that can be interpreted as a personal attack can also be
               interpreted as a signal of feeling bad. -->
-          </paragraph-block>
+          </takeaway-block>
+          <p>Especially, if you do not know them well enough personally.</p>
           <thought-bubble style="max-width: 20rem"
             >Even though it felt like Charly wants to blame me in front of the
             others I am going to assume for now that he simply wants to make
@@ -447,15 +489,15 @@
           </thought-bubble>
         </section>
         <section>
+          <div class="heading">Don't reject their view</div>
           <paragraph-block>
-            <span slot="heading">Don't reject their view</span>
             ... instead try to understand their view and figure out a way so
             that it makes sense to you.
           </paragraph-block>
         </section>
         <section>
+          <div class="heading">Forgive mistakes</div>
           <paragraph-block>
-            <span slot="heading">Forgive mistakes</span>
             Don't get caught up with unimportant details even if you spot a
             mistake or a logical fallacy.
           </paragraph-block>
@@ -469,9 +511,9 @@
               {"leftOrRight":"left", "message":"We still need to protect them"}
             ]'
           ></squirrel-conversation>
-          <paragraph-block>
-            Instead, focus your attention on what is important.
-          </paragraph-block>
+          <takeaway-block>
+            Focus your attention on what is important.
+          </takeaway-block>
         </section>
         <section>
           <important-block
@@ -491,11 +533,11 @@
           </paragraph-block> -->
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Be constructive</span>
+          <div class="heading">Be constructive</div>
+          <takeaway-block>
             Think about what you could say to make sure both of you leave the
             conversation better off than before.
-          </paragraph-block>
+          </takeaway-block>
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
@@ -509,11 +551,11 @@
           ></squirrel-conversation>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Find common ground</span>
+          <div class="heading">Find common ground</div>
+          <takeaway-block>
             Try to figure out what both of you have in common first instead of
             focusing on the differences
-          </paragraph-block>
+          </takeaway-block>
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
@@ -523,29 +565,33 @@
           ></squirrel-conversation>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Don't try to 'win an argument'</span>
+          <div class="heading">Don't try to 'win an argument'</div>
+          <takeaway-block>
             At first, try to focus on creating a shared understanding instead of
             trying to 'win an argument' or persuade others.
-          </paragraph-block>
+          </takeaway-block>
           <paragraph-block
             >If you still want to persuade you can do so later.</paragraph-block
           >
         </section>
         <section>
+          <div class="heading">A perfect solution might not exist</div>
           <paragraph-block>
-            <span slot="heading">A perfect solution might not exist</span>
             Don't reject solutions because there is an downside or uncertainty.
+          </paragraph-block>
+          <takeaway-block>
             Try to aim for a better solution instead of a perfect solution and
             accept that there will be uncertainty.
-          </paragraph-block>
+          </takeaway-block>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Disagree</span>
+          <div class="heading">Disagree</div>
+          <takeaway-block>
             If you disagree you can now find a good counter argument that
-            addresses their point. The Principle of Charity is still helpful if
-            you end up disagreeing.
+            addresses their point.
+          </takeaway-block>
+          <paragraph-block>
+            The Principle of Charity is still helpful if you end up disagreeing.
           </paragraph-block>
           <squirrel-conversation
             messages='[
@@ -557,11 +603,11 @@
           ></squirrel-conversation>
         </section>
         <section>
-          <paragraph-block>
-            <span slot="heading">Learn</span>
+          <div class="heading">Learn</div>
+          <takeaway-block>
             Maybe you learned something or discovered an argument that
             influenced your view.
-          </paragraph-block>
+          </takeaway-block>
           <thought-bubble style="max-width: 20rem"
             >Even though I don't agree with Charly I realized that just
             collecting more and more food each year is not the solution
@@ -569,8 +615,8 @@
           >
         </section>
         <section>
+          <div class="heading">Step away</div>
           <paragraph-block>
-            <span slot="heading">Step away</span>
             Maybe you just want to not engage further now that you understood
             it.
           </paragraph-block>
@@ -581,13 +627,13 @@
         </section>
         <section>
           <paragraph-block
-            ><span slot="heading">Limited bandwidth</span> Others rarely have
+            ><div class="heading">Limited bandwidth</div> Others rarely have
             the opportunity to say everything and explain every detail. When we
             interpret others we fill the gaps. We can do this assuming good
             faith and intentions or do the opposite.</paragraph-block
           >
           <paragraph-block
-            ><span slot="heading">Feeling disrespected</span> Interpreting
+            ><div class="heading">Feeling disrespected</div> Interpreting
             something in a negative light might lead to feeling disrespected
             which might lead to defensiveness which hinders constructive
             communication.</paragraph-block
@@ -596,13 +642,95 @@
       </main>
     </div>
 
+    <template id="takeaway-block-template">
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+      </style>
+      <div
+        style="
+          background-color: hsl(26, 39.5%, 55.3%);
+          color: white;
+          border-radius: 5px;
+          padding: 0.5rem;
+          display: flex;
+          gap: 0.8rem;
+          align-items: center;
+          font-weight: 700;
+          flex-direction: row;
+          position: relative;
+        "
+      >
+        <!-- Lightbulb -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          style="
+            height: 2rem;
+            color: white;
+            border: 2px solid white;
+            opacity: 0.9;
+            padding: 0.3rem;
+            border-radius: 5px;
+          "
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"
+          />
+        </svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" style="
+            height: 1.5rem;
+            position: absolute;
+            top: 0;
+            transform: translate(0, -0.8rem);
+            background-color: hsl(26, 39.5%, 55.3%);
+            border: 2px solid white;
+            padding: 0.2rem;
+            border-radius: 5px;
+          " viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg> -->
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" style="
+            height: 1.5rem;
+            position: absolute;
+            top: 0;
+            transform: translate(0, -0.8rem);
+            background-color: hsl(26, 39.5%, 55.3%);
+            border: 2px solid white;
+            padding: 0.2rem;
+            border-radius: 5px;
+          " viewBox="0 0 24 24"><path fill="currentColor" d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74c0-3.86-3.14-7-7-7m2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A5 5 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1"/></svg> -->
+        <!-- <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 14 14"
+          style="
+            height: 1.5rem;
+            position: absolute;
+            top: 0;
+            transform: translate(0, -0.8rem);
+            background-color: hsl(26, 39.5%, 55.3%);
+            border: 2px solid white;
+            padding: 0.2rem;
+            border-radius: 5px;
+          "
+        >
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M6.907.126a4.81 4.81 0 0 1 4.905 4.844a4.8 4.8 0 0 1-.728 2.52q-.22.348-.407.623l-.11.164c-.15.227-.268.414-.363.601c-.179.353-.287.73-.287 1.36a.98.98 0 0 1-.98.978H5.063a.98.98 0 0 1-.98-.979c0-.62-.098-.992-.265-1.335c-.129-.265-.292-.506-.513-.833q-.149-.218-.336-.503A4.812 4.812 0 0 1 6.907.126M5.685 12.375a.75.75 0 0 0 0 1.5h2.63a.75.75 0 0 0 0-1.5z"
+            clip-rule="evenodd"
+          />
+        </svg> -->
+        <slot></slot>
+      </div>
+    </template>
     <template id="thought-bubble-template">
       <style>
         * {
           box-sizing: border-box;
         }
       </style>
-      <div style="color: white; font-weight: 700; position: relative">
+      <div style="color: white; font-weight: 500; position: relative">
         <div
           style="
             width: 100%;
@@ -659,25 +787,30 @@
           box-sizing: border-box;
         }
       </style>
-      <div style="position: relative; width: fit-content">
+      <div
+        style="
+          position: relative;
+          width: fit-content;
+          color: white;
+          font-weight: 500;
+        "
+      >
         <div
           style="
             border-radius: 5px;
-            background-color: white;
-            border: 5px solid #2c6c1280;
-            height: 100%;
-            width: 100%;
+            background-color: #2c6c1280;
+            height: calc(100% - 3px);
+            width: calc(100% - 3px);
             position: absolute;
             bottom: 0;
             left: 0;
           "
           class="speech-bubble-background"
         ></div>
-        <!-- <div
+        <div
           style="
             border-radius: 5px;
-            /* background-color: #2c6c1280; */
-            border: 3px solid #2c6c1280;
+            background-color: #2c6c1280;
             height: calc(100% - 3px);
             width: calc(100% - 3px);
             position: absolute;
@@ -685,8 +818,10 @@
             right: 0;
           "
           class="speech-bubble-background"
-        ></div> -->
-        <div style="position: relative; padding: 0.7rem; margin: 0">
+        ></div>
+        <div
+          style="color: white; position: relative; padding: 0.7rem; margin: 0"
+        >
           <slot></slot>
         </div>
       </div>
@@ -719,9 +854,9 @@
     <template id="important-block-template">
       <div
         style="
-          background-color: #ab7e59ff;
+          /* background-color: hsl(26, 39.5%, 55.3%); */
           border-radius: 5px;
-          color: white;
+          /* color: white; */
           padding-top: 0.5rem;
           text-align: center;
           display: flex;
@@ -733,17 +868,18 @@
         <div style="font-size: small">The Principle of Charity says ...</div>
         <div
           style="
-            font-size: large;
+            font-size: 2rem;
             font-family: 'Tagesschrift', system-ui;
-            padding-left: 2rem;
+            /* padding-left: 2rem;
             padding-right: 2rem;
-            padding-bottom: 2rem;
+            padding-bottom: 2rem; */
           "
         >
           <slot></slot>
         </div>
       </div>
     </template>
+    <!-- TODO Heading is not used any more. This can be a simple div now -->
     <template id="paragraph-block-template">
       <div
         style="
@@ -756,7 +892,7 @@
       >
         <h3
           style="
-            background-color: #ab7e59ff;
+            background-color: hsl(26, 39.5%, 55.3%);
             border-radius: 5px;
             font-weight: 700;
             text-align: center;
