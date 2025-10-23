@@ -383,66 +383,89 @@
         <!-- All mindsets here that do not clearly belong to "being charitable" -->
         <section>
           <p class="heading">While exploring possible interpretations ...</p>
-          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+            <div class="flex-item">
               <takeaway-block>Have an open mind</takeaway-block>
-              Try to also find interpretations that do not come naturally to
-              you. Even if they seem implausible first, don't reject them
-              immediately and try to find a version that seems reasonable.
-            </paragraph-block>
-            <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
+              <p>
+                Try to also find interpretations that do not come naturally to
+                you.
+              </p>
+              <p>
+                Even if they seem implausible first, don't reject them
+                immediately and try to find a version that seems reasonable.
+              </p>
+            </div>
+            <div class="flex-item">
               <takeaway-block>Acknowledge your bias</takeaway-block>
-              Watch out! While interpreting, we tend be biased and think in ways
-              we are already familiar.<br />
-              For example, we might stick to a certain view because it is the
-              first thing that came to our mind.<br />
+              <p>
+                While interpreting, we tend be biased and think in ways we are
+                already familiar.
+              </p>
+              <p>
+                For example, we might stick to a certain view because it is the
+                first thing that came to our mind.<br />
+              </p>
+              <p>
+                Try to be aware of your bias and try to actively explore outside
+                of it
+              </p>
               <a target="_blank" href="https://yourbias.is/"
-                >Bias overview</a
-              ></paragraph-block
-            >
-            <!-- <paragraph-block style="flex-basis: 15rem; flex-grow: 1">
+                >Learn more about common types of bias</a
+              >
+            </div>
+            <!-- <div style="flex-basis: 15rem; flex-grow: 1">
               <takeaway-block>Humility</takeaway-block>
               Our initial interpretations can be wrong even though we might feel
               sure about them initially.</paragraph-block
             > -->
-            <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
-              <takeaway-block>Don't think in boxes</takeaway-block>
-              We can be quick to put others in boxes or associate them with
-              groups.
-              <thought-bubble style="max-width: 30rem"
+            <div class="flex-item">
+              <takeaway-block>Don't put people in boxes</takeaway-block>
+              <p>
+                We can be quick to put others in boxes or associate them with
+                groups.
+              </p>
+              <thought-bubble style="max-width: 30rem; text-align: left"
                 >There is a group that wants to prohibit all forms of sharing
                 food with others. I quickly thought Charly might belong to them
                 but I should not assume that so quickly without getting to know
                 him more.
               </thought-bubble>
-              <paragraph-block>
-                Instead, focus on understanding the individual.
-              </paragraph-block>
-            </paragraph-block>
-            <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
+              <p>Instead, focus on understanding the individual.</p>
+            </div>
+            <div class="flex-item">
               <takeaway-block>Don't think in black and white</takeaway-block>
-              We sometimes only think in extremes and neglect the grey area in
-              between.<br />
-              We might assume there is a clear right and wrong.
+              <p>
+                We sometimes only think in extremes and neglect the grey area in
+                between.
+              </p>
+              <p><b>1.</b> We might assume there is a clear right and wrong.</p>
               <thought-bubble>
                 There must be one explanation that explains everything clearly
               </thought-bubble>
-              Instead, explanations can be mixture and incomplete.<br /><br />
-              We might assume others are either fully on or side or completely
-              against everything we do
-              <thought-bubble
-                >Charly does not like me and is opposed to anything I
-                say</thought-bubble
-              >
-              But they could be anything in between.
-            </paragraph-block>
-            <paragraph-block style="flex-basis: 20rem; flex-grow: 1">
+              <p>Instead, explanations can be mixture and incomplete.</p>
+              <p>
+                <b>2.</b> We might assume others are either fully on or side or
+                completely against everything we do
+              </p>
+              <thought-bubble>
+                Charly does not like me and is opposed to anything I say
+              </thought-bubble>
+              <p>But they could be anything in between.</p>
+            </div>
+            <div class="flex-item">
               <takeaway-block>Learn from one another</takeaway-block>
-              Assume there is something you (and they) can learn.
+              <p>
+                Assume that there is something you can learn from one another
+                and make this your primary reason for interacting with them.
+              </p>
+              <p>
+                The better we understand one another, the better we can move
+                things in the right direction.
+              </p>
               <!-- Even if there is nothing
               to learn directly from what the other says, you can continue their
               thoughts and find something valuable that way. -->
-            </paragraph-block>
+            </div>
           </div>
         </section>
         <!-- <section>
@@ -660,6 +683,7 @@
           font-weight: 700;
           flex-direction: row;
           position: relative;
+          width: fit-content;
         "
       >
         <!-- Lightbulb -->
@@ -746,13 +770,7 @@
           />
         </div>
         <div
-          style="
-            color: white;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          "
+          style="color: white; margin: 0; display: flex; flex-direction: column"
         >
           <span
             style="
@@ -765,6 +783,7 @@
               padding: 0.2rem;
               font-family: 'Tagesschrift', system-ui;
               visibility: hidden;
+              align-self: center;
             "
             class="thought-blubble-heading"
             ><slot name="heading">No Title</slot></span
@@ -774,6 +793,8 @@
               padding-left: 2rem;
               padding-bottom: 1rem;
               padding-right: 2rem;
+              align-self: flex-start;
+              text-align: left;
             "
           >
             <slot></slot>
