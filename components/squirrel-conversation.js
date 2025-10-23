@@ -50,10 +50,10 @@ class SquirrelConversation extends HTMLElement {
         messageObject.leftOrRight === "right" ? "0" : "4rem";
       // container.style.alignSelf =
       messageObject.leftOrRight === "left" ? "start" : "end";
-      if (messageObject.thumb) {
-        container.innerHTML =
-          messageObject.thumb === "up" ? thumbUpSvg : thumbDownSvg;
-      }
+      // if (messageObject.thumb) {
+      //   container.innerHTML =
+      //     messageObject.thumb === "up" ? thumbUpSvg : thumbDownSvg;
+      // }
       container.appendChild(speechBubble);
       speechBubbleContainer.appendChild(container);
     });
