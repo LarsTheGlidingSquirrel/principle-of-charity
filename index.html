@@ -721,43 +721,60 @@
         <section>
           <div class="heading">Strive for better instead of perfect</div>
           <!-- TODO: Change sentence -->
+
           <p>
             Most likely a conversation will not result in everyone feeling
             perfect afterwards
           </p>
+          <thought-bubble style="max-width: 20rem"
+            >I think Charly would love to have a concrete plan ready today but I
+            am not convinced by his idea and also want to consult the others
+            first
+          </thought-bubble>
+          <thought-bubble style="max-width: 20rem"
+            >I don't think the outcome of our conversation will make both of us
+            100% happy but I will still try to make it better than before
+          </thought-bubble>
           <p>
-            Also, finding a perfect solution for everyone might be impossible
+            Finding a perfect solution that has no potential downsides and
+            everyone agrees might be impossible
+          </p>
+          <squirrel-conversation
+            messages='[
+            {"leftOrRight":"right", "message":"I know our current plan for next winter is not perfect and there are still some arguments against it", "thumb": "up"},
+            {"leftOrRight":"right", "message":"This is not an easy problem and a perfect solution might not exist", "thumb": "up"},
+            {"leftOrRight":"right", "message":"But I think we are already better prepared than last year", "thumb": "up"},
+            {"leftOrRight":"right", "message":"What do you think?", "thumb": "up"},
+            {"leftOrRight":"left", "message":"The new plan is definitely better", "thumb": "up"}
+            ]'
+          ></squirrel-conversation>
+          <p>
+            Sometimes making things better now is more valuable than spending a
+            long time trying to find something perfect
           </p>
           <takeaway-block>
             Try to aim for a better instead of a perfect when trying to
             communicate in a constructive way
           </takeaway-block>
-          <p>
-            Sometimes making things better now is more valuable than spending a
-            long time trying to find something perfect
-          </p>
-          <squirrel-conversation
-            messages='[
-            {"leftOrRight":"right", "message":"..."},
-            {"leftOrRight":"left", "message":"...", "thumb": "up"},
-            {"leftOrRight":"right", "message":"I know our plan for next winter is not perfect and there are still some risks and arguments against it", "thumb": "up"},
-            {"leftOrRight":"right", "message":"This is not an easy problem and a perfect solution might not exist", "thumb": "up"},
-            {"leftOrRight":"right", "message":"But I think we are already better prepared than last year", "thumb": "up"},
-            {"leftOrRight":"right", "message":"How about we start with this plan for now but meet again soon to refine it?", "thumb": "up"}
-            ]'
-          ></squirrel-conversation>
         </section>
         <section>
           <div class="heading">Accept uncertainty</div>
           <p>Im most things we do there will be uncertainty</p>
           <p>We can never be 100% sure that:</p>
           <p>- How we interpret others aligns with reality</p>
+          <!-- TODO: Find better example -->
+          <thought-bubble style="max-width: 20rem"
+            >I think Charly wants to be involved in the planning because he
+            really cares about our safety. I am going to invite him to our next
+            planning session but there is a chance he might not be interested.
+          </thought-bubble>
           <p>- What we say is constructive</p>
+          <thought-bubble style="max-width: 20rem"
+            >I will suggest we talk about this idea when the others can join as
+            well. But there is a chance that Charly will feel disappointed by
+            that.
+          </thought-bubble>
           <p>- A solution will make things better</p>
-          <takeaway-block>
-            Accept that there will be uncertainty and don't let it stop you from
-            trying to move things forward
-          </takeaway-block>
           <squirrel-conversation
             messages='[
             {"leftOrRight":"right", "message":"..."},
@@ -767,6 +784,10 @@
             {"leftOrRight":"right", "message":"I think this is better than spending more time trying to come up with a perfect plan", "thumb": "up"}
             ]'
           ></squirrel-conversation>
+          <takeaway-block>
+            Accept that there will be uncertainty and don't let it stop you from
+            trying to move things forward
+          </takeaway-block>
           <!-- <paragraph-block>
             Don't reject solutions because there is an downside or uncertainty.
           </paragraph-block> -->
@@ -784,14 +805,26 @@
           <squirrel-conversation
             messages='[
             {"leftOrRight":"left", "message":"We need to protect our food better this year"},
-            {"leftOrRight":"right", "message":"We are working on a plan already and know that some of you were not happy with the situation last year", "thumb": "up"},
-            {"leftOrRight":"right", "message":"So please share your ideas with us instead of just criticizing what we do", "thumb": "up"} 
+            {"leftOrRight":"right", "message":"We are working on a plan already and know that you and some others were not happy with the situation last year", "thumb": "up"},
+            {"leftOrRight":"right", "message":"Please stop criticizing what we do if you are not involved", "thumb": "up"},
+            {"leftOrRight":"left", "message":"Don`t be so defensive", "thumb": "up"},
+            {"leftOrRight":"left", "message":"You are responsible for our safety and failed with that", "thumb": "up"},
+            {"leftOrRight":"left", "message":"I have all the right criticizing you" } 
             ]'
           ></squirrel-conversation>
           <takeaway-block>
             Try to think of everyone being on the same team but with different
             views
           </takeaway-block>
+          <squirrel-conversation
+            messages='[
+            {"leftOrRight":"left", "message":"I was thinking about building new hiding places"},
+            {"leftOrRight":"right", "message":"Thank you for caring about our safety and sharing your idea with us", "thumb": "up"},
+            {"leftOrRight":"right", "message":"I am not sold on the idea of building new hiding places", "thumb": "up"},
+            {"leftOrRight":"right", "message":"But I agree that we need to make a plan", "thumb": "up"},
+            {"leftOrRight":"right", "message":"Let`s collect these possible solutions and discuss them in the group", "thumb": "up"}
+            ]'
+          ></squirrel-conversation>
         </section>
         <section>
           <div class="heading">Make others feel respected and heard</div>
@@ -812,7 +845,10 @@
             Try to figure out what both of you have in common first instead of
             focusing on the differences
           </takeaway-block>
-          <!-- TODO: Move this example to answer block -->
+          <p>
+            This might prevent "us against them" dynamics and help make everyone
+            feel like having a shared goal & being on the same team
+          </p>
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
@@ -824,30 +860,68 @@
 
         <section>
           <div class="heading">Don't try to 'win an argument'</div>
-          <takeaway-block>
-            At first, try to focus on creating a shared understanding instead of
-            trying to 'win an argument' or persuade others.
-          </takeaway-block>
-          <paragraph-block
-            >If you still want to persuade you can do so later.</paragraph-block
+          <p>
+            When we have different views we can get stuck in an back-and-forth
+            trying to strengthen our view or arguing against their view
+          </p>
+          <squirrel-conversation
+            messages='[
+          {"leftOrRight":"left", "message":"I think we should build new hiding places"},
+          {"leftOrRight":"right", "message":"I think you are underestimating the effort"},
+          {"leftOrRight":"right", "message":"I think we should instead just spend the time collecting more food"},
+          {"leftOrRight":"left", "message":"I don`t think the other squirrels will enjoy collecting food when they know that so much will be stolen"},
+          {"leftOrRight":"right", "message":"I don`t think they will enjoy building new hiding places either"},
+          {"leftOrRight":"left", "message":"..."}
+          ]'
+          ></squirrel-conversation>
+          <p>
+            As long as no one is willing to depart from their own view and is
+            only trying to strengthen or defend their existing view there can be
+            no resolution
+          </p>
+          <takeaway-block>Be open to change your view</takeaway-block>
+          <p>Changing your view is not a sign of weakness</p>
+          <p>
+            It is a sign of your willingness to learn and shows that you do not
+            hold your views too high
+          </p>
+          <p>
+            It shows you value good arguments and that you prioritize
+            understanding and better outcomes over "being right"
+          </p>
+          <squirrel-conversation
+            messages='[
+              {"leftOrRight":"right", "message":"I think building new hiding places is too much work"},
+              {"leftOrRight":"left", "message":"We could ask the mice if they could help us building them"},
+              {"leftOrRight":"left", "message":"I am sure they are willing to help because we gave them food last winter"},
+              {"leftOrRight":"left", "message":"They are quick in digging holes"},
+              {"leftOrRight":"right", "message":"Hm, I have not thought about that"},
+              {"leftOrRight":"right", "message":"Actually, I agree"},
+              {"leftOrRight":"right", "message":"Let ask the mice for help"}
+              ]'
+          ></squirrel-conversation>
+        </section>
+        <section>
+          <div class="heading">
+            Don't make it your goal that everyone shares your view
+          </div>
+          <p>
+            Trying to persuade others might be a lot of effort or even
+            impossible
+          </p>
+          <p>There is also a chance that your view is flawed</p>
+          <p>
+            People having different views is often beneficial and helps to
+            expose flaws and find solutions that are solid even when viewed from
+            different viewpoints
+          </p>
+          <takeaway-block
+            >People can agree and find solutions even if their views are
+            different</takeaway-block
           >
         </section>
 
         <section>
-          <p>
-            If you disagree with the other it might be tempting to talk about
-            why you disagree or why they are wrong
-          </p>
-          <p>Instead, try to focus on finding a solution together with them</p>
-          <squirrel-conversation
-            messages='[
-            {"leftOrRight":"left", "message":"I was thinking about building new hiding places that have narrow entries to prevent others from seeing the hiding place"},
-            {"leftOrRight":"right", "message":"Thank you for caring about our safety and sharing your idea with us", "thumb": "up"},
-            {"leftOrRight":"right", "message":"I agree that we need to make a plan", "thumb": "up"},
-            {"leftOrRight":"right", "message":"Let`s collect these possible solutions and discuss them in the group", "thumb": "up"}
-            ]'
-          ></squirrel-conversation>
-
           <div class="heading">Don't speak in absolutes</div>
           <takeaway-block
             >Don't speak in absolutes and don't use
@@ -855,16 +929,20 @@
           >
           <squirrel-conversation
             messages='[
-            {"leftOrRight":"left", "message":"..."},
+            {"leftOrRight":"left", "message":"I think we should build new hiding places"},
             {"leftOrRight":"right", "message":"I can tell you right now that this won`t work", "thumb": "down"},
             {"leftOrRight":"right", "message":"You always come up with these crazy ideas but don`t know what you are talking about", "thumb": "up"}
             ]'
           ></squirrel-conversation>
           <p>
-            TODO Speaking in absolutes is wrong because most of the time you
-            don't know
+            In this example "this won`t work" and your accusation "you don't
+            know what you are talking about" sound like you know these things
+            for sure but you probably don't
           </p>
-
+          <p>
+            Speaking in absolutes is often incorrect because most of the time
+            you don't know something for sure
+          </p>
           <div class="heading">Use I-statements</div>
           <takeaway-block
             >Don't try to appear to know everything and use
@@ -878,25 +956,33 @@
             messages='[
             {"leftOrRight":"left", "message":"..."},
             {"leftOrRight":"right", "message":"I agree that we need to make a plan but I am not convinced building new hiding places is the best solution", "thumb": "up"},
-            {"leftOrRight":"right", "message":"", "thumb": "up"},
             {"leftOrRight":"right", "message":"Let`s collect these possible solutions and discuss them in the group", "thumb": "up"}
             ]'
           ></squirrel-conversation>
-
-          <takeaway-block>Focus on the core of a disagreement</takeaway-block>
-          <p>
-            Sometimes during a disagreement we get caught up in details.
-            Instead, try to find the core of the issue and focus on finding
-            solutions here.
-          </p>
         </section>
 
         <section>
           <div class="heading">Disagree</div>
+          <p>
+            Once you understand another view and what they want to say you can
+            disagree
+          </p>
+          <p>Don't tell them something they already know</p>
+          <p>Don't try to just strengthen your point or weaken theirs</p>
           <takeaway-block>
-            If you disagree you can now find a good counter argument that
-            addresses their point
+            Let the other know that you disagree and try to help them understand
+            why you disagree
           </takeaway-block>
+          <p>
+            After having explored many interpretations and once you feel like
+            you really understand the other view you are now able to formulate a
+            good argument against their view
+          </p>
+          <takeaway-block>
+            You can find a good counter argument that addresses their point once
+            you have understood the other view thoroughly
+          </takeaway-block>
+          <!-- TODO: Convincing counter argument in example -->
           <squirrel-conversation
             messages='[
           {"leftOrRight":"left", "message":"..."},
@@ -905,10 +991,21 @@
           {"leftOrRight":"right", "message":"Instead, I think we should focus this additional energy on collecting more food", "thumb": "up"}
           ]'
           ></squirrel-conversation>
-          <paragraph-block>
+          <takeaway-block>
             The Principle of Charity is not about agreeing with other people and
             everything they say
-          </paragraph-block>
+          </takeaway-block>
+          <takeaway-block>Focus on the core of a disagreement</takeaway-block>
+          <p>
+            Sometimes during a disagreement we get caught up in details.
+            Instead, try to find the core of the issue and focus on finding
+            solutions here.
+          </p>
+          <!-- TODO: Example -->
+        </section>
+        <section>
+          <!-- TODO: Remove "principle of charity says" -->
+          <important-block>Why?</important-block>
         </section>
         <section>
           <div class="heading">Less misunderstanding</div>
