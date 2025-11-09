@@ -88,12 +88,10 @@
           <div>Let's explore this principle using an example!</div>
         </section>
         <section id="example-setting">
-          <paragraph-block>
-            Example:
-            <div class="heading">
-              A community of squirrels talk about collecting food for the winter
-            </div>
-          </paragraph-block>
+          <important-block>
+            <span slot="above">Example:</span>
+            A community of squirrels talk about collecting food for the winter
+          </important-block>
         </section>
         <section>
           <squirrel-conversation
@@ -188,9 +186,10 @@
         </section>
         <section>
           <!-- TODO: Add thought bubbles all around -->
-          <important-block
-            >There are many possible interpretations</important-block
-          >
+          <important-block>
+            <span slot="above">The Principle of Charity says ...</span>
+            There are many possible interpretations
+          </important-block>
           <paragraph-block>
             Not only based on the words but also on
             <b>tone</b>, <b>body language</b>, <b>setting</b>, ...
@@ -253,7 +252,10 @@
           <!-- TODO: Add exercise: "Think about a situation where your initial interpretation was wrong. Did you respond to quickly?" -->
         </section>
         <section>
-          <important-block>Explore possible interpretations</important-block>
+          <important-block>
+            <span slot="above">The Principle of Charity says ...</span>
+            Explore possible interpretations</important-block
+          >
           Keep a set of possible interpretations in your head and try to improve
           it
           <takeaway-block>Try to find new interpretations</takeaway-block>
@@ -491,9 +493,10 @@
           ></squirrel-conversation>
         </section> -->
         <section>
-          <important-block
-            >Be charitable when you interpret others</important-block
-          >
+          <important-block>
+            <span slot="above">The Principle of Charity says ...</span>
+            Be charitable when you interpret others
+          </important-block>
           <paragraph-block
             >... to help make the conversation more constructive and to build
             trust & respect.</paragraph-block
@@ -578,8 +581,9 @@
           </takeaway-block>
         </section>
         <section>
-          <important-block
-            >Focus on interpretations that are realistic & charitable
+          <important-block>
+            <span slot="above">The Principle of Charity says ...</span>
+            Focus on interpretations that are realistic & charitable
           </important-block>
           <p>
             You explored possible interpretations and thought about how
@@ -657,7 +661,6 @@
         </section>
         <section></section>
         <section>
-          <!-- TODO: Remove "The principle of charity says ..." here -->
           <important-block>Be constructive</important-block>
           <takeaway-block>
             Try to make everyone involved in the conversation leave better off
@@ -1004,7 +1007,13 @@
           <!-- TODO: Example -->
         </section>
         <section>
-          <!-- TODO: Remove "principle of charity says" -->
+          <important-block>
+            <span slot="above">You reached the end</span>
+            Thank you for reading
+          </important-block>
+          <p>We would love to know what you thought about this</p>
+        </section>
+        <!-- <section>
           <important-block>Why?</important-block>
         </section>
         <section>
@@ -1040,7 +1049,7 @@
             Maybe you just want to not engage further now that you understood
             it.
           </paragraph-block>
-        </section>
+        </section> -->
         <!-- Under construction ...
         <section>
           <important-block>Why?</important-block>
@@ -1269,12 +1278,11 @@
         </div>
       </div>
     </template>
+    <!-- TODO: Rename to heading -->
     <template id="important-block-template">
       <div
         style="
-          /* background-color: hsl(26, 39.5%, 55.3%); */
           border-radius: 5px;
-          /* color: white; */
           padding-top: 0.5rem;
           text-align: center;
           display: flex;
@@ -1283,7 +1291,9 @@
           gap: 0.5rem;
         "
       >
-        <div style="font-size: small">The Principle of Charity says ...</div>
+        <div>
+          <slot name="above"></slot>
+        </div>
         <div
           style="
             font-size: 2rem;
