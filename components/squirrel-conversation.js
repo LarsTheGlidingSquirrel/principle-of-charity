@@ -15,6 +15,7 @@ const thumbDownSvg = `
 
 class SquirrelConversation extends HTMLElement {
   messages = [];
+  positiveOrNegative = null;
 
   constructor() {
     super();
@@ -27,7 +28,15 @@ class SquirrelConversation extends HTMLElement {
   connectedCallback() {
     const speechBubbleContainer =
       this.shadowRoot.querySelector(".speech-bubble");
-    if (!this.messages || !speechBubbleContainer) return;
+    const positiveOrNegativeContainer = this.shadowRoot.querySelector(
+      ".positive-or-negative-container"
+    );
+    if (
+      !this.messages ||
+      !speechBubbleContainer ||
+      !positiveOrNegativeContainer
+    )
+      return;
     // Clear container content
     speechBubbleContainer.innerHTML = "";
     // Add messages
@@ -57,6 +66,13 @@ class SquirrelConversation extends HTMLElement {
       container.appendChild(speechBubble);
       speechBubbleContainer.appendChild(container);
     });
+
+    positiveOrNegativeContainer.innerHTML = "";
+    if (this.positiveOrNegative === "positive") {
+      positiveOrNegativeContainer.innerHTML = thumbUpSvg;
+    } else if (this.positiveOrNegative === "negative") {
+      positiveOrNegativeContainer.innerHTML = thumbDownSvg;
+    }
   }
 
   disconnectedCallback() {
@@ -65,12 +81,15 @@ class SquirrelConversation extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["messages"];
+    return ["messages", "positive-or-negative"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === "messages" && oldValue !== newValue) {
       this.messages = JSON.parse(newValue);
+    }
+    if (name === "positive-or-negative" && oldValue !== newValue) {
+      this.positiveOrNegative = newValue;
     }
   }
 
