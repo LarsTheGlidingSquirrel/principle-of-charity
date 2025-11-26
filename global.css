@@ -24,16 +24,26 @@ section {
 	font-size: x-large;
 }
 
+p {
+	text-align: center;
+}
+
 .emphasis-block {
 	background-color: hsl(26, 39.5%, 55.3%);
 	border-radius: 5px;
-	font-weight: 600;
 	text-align: center;
-	padding: 0.5rem;
+	padding: .7rem;
 	color: white;
 	font-size: medium;
 	margin: 0;
 }
+
+.summary-box {
+	border: 3px solid hsl(26, 39.5%, 55.3%);
+	padding: 10px;
+	border-radius: 5px;
+}
+
 
 p {
 	margin: 0
