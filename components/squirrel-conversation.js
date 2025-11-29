@@ -16,6 +16,10 @@ const thumbDownSvg = `
 class SquirrelConversation extends HTMLElement {
   messages = [];
   positiveOrNegative = null;
+  squirrelImage = {
+    'left': 'neutral',
+    'right': 'neutral',
+  }
 
   constructor() {
     super();
@@ -76,6 +80,19 @@ class SquirrelConversation extends HTMLElement {
       positiveOrNegativeContainer.innerHTML = thumbDownSvg;
       positiveOrNegativeContainer.style.display = "flex";
     }
+
+    // Squirrel mood
+    setSquirrelImage('right', this.shadowRoot, this.squirrelImage)
+    setSquirrelImage('left', this.shadowRoot, this.squirrelImage)
+    function setSquirrelImage(leftOrRight, shadowRoot, squirrelImage) {
+      const squirrelContainer = shadowRoot.querySelector(`.squirrel-${leftOrRight}`)
+      squirrelContainer.innerHTML = ""
+      const squirrelImageFile = `media/squirrel/${squirrelImage[leftOrRight]}.svg`
+      const image = document.createElement("img");
+      image.setAttribute('src', squirrelImageFile)
+      image.style.height = '100%'
+      squirrelContainer.appendChild(image)
+    }
   }
 
   disconnectedCallback() {
@@ -84,7 +101,7 @@ class SquirrelConversation extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["messages", "positive-or-negative"];
+    return ["messages", "positive-or-negative", "squirrel-left", "squirrel-right"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -93,6 +110,12 @@ class SquirrelConversation extends HTMLElement {
     }
     if (name === "positive-or-negative" && oldValue !== newValue) {
       this.positiveOrNegative = newValue;
+    }
+    if (name === "squirrel-left" && oldValue !== newValue) {
+      this.squirrelImage['left'] = newValue
+    }
+    if (name === "squirrel-right" && oldValue !== newValue) {
+      this.squirrelImage['right'] = newValue
     }
   }
 

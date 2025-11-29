@@ -132,8 +132,9 @@
           </div>
         </section>
         <section id="example-setting">
-          <important-block>
-            <span slot="above">Example:</span>
+          <p>Example:</p>
+          <img style="width: 100%; max-width: 40rem" src="media/squirrels-example.svg">
+          <important-block>            
             A community of squirrels talk about collecting food for the winter
           </important-block>
         </section>
@@ -143,6 +144,8 @@
               {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
               {"leftOrRight":"left", "message":"We need to protect them better this year"}
             ]'
+            squirrel-left="talking-neutral"
+            squirrel-right="thinking"
           ></squirrel-conversation>
           <!-- TODO: Add exercise "What do you think Charly wants to say? Imagine different ways he might say it an different contexts" -->
           <div
@@ -1407,11 +1410,9 @@
           class="speech-bubble"
         ></div>
         <div style="display: flex; justify-content: space-between; gap: 3rem">
-          <squirrel-illustration></squirrel-illustration>
+          <div style="height: 8rem" class="squirrel-left"></div>
           <div style="position: relative">
-            <squirrel-illustration
-              style="transform: scale(-1, 1)"
-            ></squirrel-illustration>
+            <div style="height: 8rem; transform: scale(-1, 1)" class="squirrel-right"></div>
             <div
               style="
                 position: absolute;
