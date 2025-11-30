@@ -87,7 +87,7 @@ class SquirrelConversation extends HTMLElement {
     function setSquirrelImage(leftOrRight, shadowRoot, squirrelImage) {
       const squirrelContainer = shadowRoot.querySelector(`.squirrel-${leftOrRight}`)
       squirrelContainer.innerHTML = ""
-      const squirrelImageFile = `media/squirrel/${squirrelImage[leftOrRight]}.svg`
+      const squirrelImageFile = `images/squirrel/${squirrelImage[leftOrRight]}.svg`
       const image = document.createElement("img");
       image.setAttribute('src', squirrelImageFile)
       image.style.height = '100%'

@@ -11,21 +11,12 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
 
     <script src="components/speech-bubble.js" type="module"></script>
     <script src="components/thought-bubble.js" type="module"></script>
-    <script src="components/squirrel-illustration.js" type="module"></script>
     <script src="components/squirrel-conversation.js" type="module"></script>
     <script src="components/important-block.js" type="module"></script>
     <script src="components/paragraph-block.js" type="module"></script>
@@ -135,7 +126,7 @@
           <p>Example:</p>
           <img
             style="width: 100%; max-width: 40rem"
-            src="media/squirrels-example.svg"
+            src="images/squirrels-example.svg"
           />
           <important-block>
             A community of squirrels talk about collecting food for the winter
@@ -240,14 +231,14 @@
             <span slot="above">The Principle of Charity says ...</span>
             There are many possible interpretations
           </important-block>
-          <paragraph-block>
+          <p>
             Not only based on the words being said but also on
             <b>tone</b>, <b>body language</b>, <b>setting</b>, ...
-          </paragraph-block>
-          <paragraph-block>
+          </p>
+          <p>
             Also, your <b>past experience</b>, <b>personality</b> and
             <b>what you know about the other</b> affect your interpretations.
-          </paragraph-block>
+          </p>
         </section>
         <section>
           <div class="heading">Hold back</div>
@@ -291,12 +282,12 @@
 
         <section>
           <span class="heading">Be open to being wrong</span>
-          <paragraph-block>
+          <p>
             <span>
               Make some room in your head for the possibility that what you
               think is wrong and that there might be better interpretations
             </span>
-          </paragraph-block>
+          </p>
           <thought-bubble style="max-width: 20rem">
             My first thought is that Charly wants us to stand guard in winter.
             But, maybe I am wrong and he has a different plan.
@@ -394,17 +385,17 @@
         </section>
         <section>
           <div class="heading">Listen</div>
-          <paragraph-block>
+          <p>
             When somebody is talking or you read a message by them try to ...
-          </paragraph-block>
+          </p>
           <takeaway-block
             >Listen carefully and put your focus on understanding what they say
             instead of on coming up with an answer</takeaway-block
           >
-          <paragraph-block>
+          <p>
             Also try to pay attention to body language, tone, ... which can make
             up a big part of what somebody is trying to communicate.
-          </paragraph-block>
+          </p>
         </section>
         <section>
           <div class="heading">Think</div>
@@ -425,11 +416,11 @@
               I should ask him how.
             </thought-bubble>
           </div>
-          <paragraph-block>
+          <p>
             During a conversation it might not be appropriate to pause and
             think. But you can ask questions and think meanwhile. Or you can
             think out loudly.
-          </paragraph-block>
+          </p>
         </section>
         <section>
           <div class="heading">Come back to a conversation</div>
@@ -567,11 +558,11 @@
           </div>
         </section>
         <!-- <section>
-          <paragraph-block>
+          <p>
             <div class="heading">Check if you understood</div>
             If questions alone are not enough, try to explain your
             interpretation and ask if you are correct.
-          </paragraph-block>
+          </p>
           <squirrel-conversation positive-or-negative='positive'
             messages='[
           {"leftOrRight":"left", "message":"..."},
@@ -647,10 +638,10 @@
         </section>
         <section>
           <div class="heading">Forgive mistakes</div>
-          <paragraph-block>
+          <p>
             Don't get caught up with unimportant details even if you spot a
             mistake or a logical fallacy.
-          </paragraph-block>
+          </p>
           <thought-bubble style="max-width: 20rem"
             >Charly said half of our food reserves were stolen last winter. But
             I know that only a quarter was stolen and the rest rotted like we
@@ -894,9 +885,9 @@
             Accept that there will be uncertainty and don't let it stop you from
             trying to move things forward
           </takeaway-block>
-          <!-- <paragraph-block>
+          <!-- <p>
             Don't reject solutions because there is an downside or uncertainty.
-          </paragraph-block> -->
+          </p> -->
         </section>
         <section>
           <div class="heading">Avoid "us against them" dynamics</div>
@@ -1169,7 +1160,7 @@
           </p>
           <p>
             <a href="https://principle-of-charity.net">Principle of Charity</a>
-            © 2025 by
+            by
             <a href="https://github.com/LarsTheGlidingSquirrel"
               >https://github.com/LarsTheGlidingSquirrel</a
             >
@@ -1224,10 +1215,10 @@
         </section>
         <section>
           <div class="heading">Step away</div>
-          <paragraph-block>
+          <p>
             Maybe you just want to not engage further now that you understood
             it.
-          </paragraph-block>
+          </p>
         </section> -->
         <!-- Under construction ...
         <section>
@@ -1350,7 +1341,7 @@
           "
         >
           <img
-            src="./thought-background.svg"
+            src="./images/thought-background.svg"
             style="width: 100%; height: 100%"
           />
         </div>
@@ -1501,37 +1492,6 @@
         >
           <slot></slot>
         </div>
-      </div>
-    </template>
-    <!-- TODO: Heading is not used any more. This can be a simple div now -->
-    <template id="paragraph-block-template">
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          gap: 2rem;
-        "
-      >
-        <h3
-          style="
-            background-color: hsl(26, 39.5%, 55.3%);
-            border-radius: 5px;
-            text-align: center;
-            padding: 0.5rem;
-            color: white;
-            display: none;
-            font-size: medium;
-            margin: 0;
-          "
-          class="paragraph-block-heading"
-        >
-          <slot name="heading"></slot>
-        </h3>
-        <p style="margin: 0">
-          <slot></slot>
-        </p>
       </div>
     </template>
     <svg
