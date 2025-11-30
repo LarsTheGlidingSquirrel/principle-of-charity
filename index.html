@@ -133,8 +133,11 @@
         </section>
         <section id="example-setting">
           <p>Example:</p>
-          <img style="width: 100%; max-width: 40rem" src="media/squirrels-example.svg">
-          <important-block>            
+          <img
+            style="width: 100%; max-width: 40rem"
+            src="media/squirrels-example.svg"
+          />
+          <important-block>
             A community of squirrels talk about collecting food for the winter
           </important-block>
         </section>
@@ -238,7 +241,7 @@
             There are many possible interpretations
           </important-block>
           <paragraph-block>
-            Not only based on the words but also on
+            Not only based on the words being said but also on
             <b>tone</b>, <b>body language</b>, <b>setting</b>, ...
           </paragraph-block>
           <paragraph-block>
@@ -255,11 +258,13 @@
           <squirrel-conversation
             positive-or-negative="negative"
             messages='[
-          {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
-          {"leftOrRight":"left", "message":"We need to protect them better this year "},
-          {"leftOrRight":"right", "message":"Standing guard in winter will be very unpleasant"},
-          {"leftOrRight":"left", "message":"What? No, that is not what I meant! "}  
-          ]'
+              {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+              {"leftOrRight":"left", "message":"We need to protect them better this year "},
+              {"leftOrRight":"right", "message":"Standing guard in winter will be very unpleasant"},
+              {"leftOrRight":"left", "message":"What? No, that is not what I meant! "}  
+              ]'
+            squirrel-left="talking-neutral"
+            squirrel-right="annoyed"
           ></squirrel-conversation>
           <p>
             You might misunderstand what the other wants to communicate and say
@@ -270,12 +275,14 @@
           <squirrel-conversation
             positive-or-negative="negative"
             messages='[
-          {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
-          {"leftOrRight":"left", "message":"We need to protect them better this year"},
-          {"leftOrRight":"right", "message":"Stop it! I know that I messed up last winter"},
-          {"leftOrRight":"right", "message":"But it was your idea to hide our food there so you are to blame"},
-          {"leftOrRight":"left", "message":"🤬💣💥"}  
-          ]'
+              {"leftOrRight":"left", "message":"Half of our food reserves were stolen last winter"},
+              {"leftOrRight":"left", "message":"We need to protect them better this year"},
+              {"leftOrRight":"right", "message":"Stop it! I know that I messed up last winter"},
+              {"leftOrRight":"right", "message":"But it was your idea to hide our food there so you are to blame"},
+              {"leftOrRight":"left", "message":"🤬💣💥"}  
+              ]'
+            squirrel-left="angry"
+            squirrel-right="annoyed"
           ></squirrel-conversation>
           <!-- <takeaway-block>
             Remember that there are many possible interpretations
@@ -309,11 +316,13 @@
             Invest some time exploring before you answer or react towards what
             was said
           </p>
+          <!-- TODO: Add image of squirrel as detective -->
           <p>Picture yourself as a detective trying to uncover the truth</p>
           <p>
             Keep a set of possible interpretations in your head and try to
             improve it
           </p>
+          <!-- TODO: Image showing more clouds added to existing clouds -->
           <takeaway-block>Try to find new interpretations</takeaway-block>
           <p>
             Expand your list and try to keep also less likely interpretations in
@@ -323,6 +332,7 @@
             Something that felt unlikely at first might become more realistic as
             time goes on
           </p>
+          <!-- TODO: Image of clouds and rating them -->
           <takeaway-block>
             Try to figure out if your interpretations are true or false
           </takeaway-block>
@@ -335,12 +345,6 @@
             misunderstandings</takeaway-block
           >
           <!-- Keep in mind that the truth lies within the other person -->
-          <!-- <takeaway-block>
-            Look into those that you already have.
-          </takeaway-block> -->
-          <!-- Your goal should be 
-          Keep a set of possible interpretations in your head. Try to figure out
-          which interpretations are most likely true. -->
         </section>
         <section>
           <h3 class="heading">Ask questions</h3>
@@ -348,10 +352,12 @@
           <squirrel-conversation
             positive-or-negative="positive"
             messages='[
-          {"leftOrRight":"left", "message":"..."},
-          {"leftOrRight":"right", "message":"How can we protect our food stashes better?"},
-          {"leftOrRight":"left", "message":"I was thinking about building new hiding places that have narrow entries to prevent others from seeing the hiding place"}  
-          ]'
+              {"leftOrRight":"left", "message":"..."},
+              {"leftOrRight":"right", "message":"How can we protect our food stashes better?"},
+              {"leftOrRight":"left", "message":"I was thinking about building new hiding places that have narrow entries to prevent others from seeing the hiding place"}  
+              ]'
+            squirrel-left="talking-smile"
+            squirrel-right="thinking"
           ></squirrel-conversation>
           <p>or</p>
           <takeaway-block>
@@ -366,6 +372,8 @@
               {"leftOrRight":"left", "message":"Don`t worry, I am not angry"},
               {"leftOrRight":"left", "message":"I just want to make sure we are better prepared this year"}  
               ]'
+            squirrel-left="talking-neutral"
+            squirrel-right="thinking"
           ></squirrel-conversation>
           <p>
             We are trying to figure out what the other wants to communicate. So
@@ -435,6 +443,8 @@
               {"leftOrRight":"right", "message":"Hey Charly"},
               {"leftOrRight":"right", "message":"I thought about what you said earlier and ..."}
               ]'
+            squirrel-left="neutral"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
           <p>Also, pausing a conversation can be helpful in many ways:</p>
           <p>
@@ -459,6 +469,8 @@
               {"leftOrRight":"left", "message":"Oh, don`t worry!"},
               {"leftOrRight":"left", "message":"I have know him since I was a child and he often gets a little intense when he talks about something he cares about"}
               ]'
+            squirrel-left="talking-neutral"
+            squirrel-right="thinking"
           ></squirrel-conversation>
           <p>
             However, do not talk behind someones back. Try to get information by
@@ -729,6 +741,8 @@
               {"leftOrRight":"left", "message":"..."},
               {"leftOrRight":"left", "message":"What I actually wanted to say is that I will be traveling a lot this year and cannot help with collecting food"}
             ]'
+            squirrel-left="talking-neutral"
+            squirrel-right="neutral"
           ></squirrel-conversation>
           <p>
             Or, people might not feel comfortable sharing the real motivations
@@ -788,6 +802,8 @@
             {"leftOrRight":"right", "message":"I feel like we now understand the problem good enough"},
             {"leftOrRight":"right", "message":"How about we switch focus on finding a solution now?"}
             ]'
+            squirrel-left="neutral"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
           <takeaway-block>
             Focusing on solutions can help make everyone leave the conversation
@@ -832,6 +848,8 @@
             {"leftOrRight":"right", "message":"What do you think?"},
             {"leftOrRight":"left", "message":"The new plan is definitely better"}
             ]'
+            squirrel-left="talking-smile"
+            squirrel-right="thinking"
           ></squirrel-conversation>
           <p>
             Sometimes making things better now is more valuable than spending a
@@ -869,6 +887,8 @@
             {"leftOrRight":"right", "message":"But I think we should start with what we have and and see how it goes"},
             {"leftOrRight":"right", "message":"I think this is better than spending more time trying to come up with a perfect plan"}
             ]'
+            squirrel-left="thinking"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
           <takeaway-block>
             Accept that there will be uncertainty and don't let it stop you from
@@ -898,6 +918,8 @@
             {"leftOrRight":"left", "message":"You are responsible for our safety and failed with that"},
             {"leftOrRight":"left", "message":"I have all the right criticizing you" } 
             ]'
+            squirrel-left="talking-angry"
+            squirrel-right="annoyed"
           ></squirrel-conversation>
           <takeaway-block>
             Try to think of everyone being on the same team but with different
@@ -912,6 +934,8 @@
             {"leftOrRight":"right", "message":"But I agree that we need to make a plan"},
             {"leftOrRight":"right", "message":"Let`s collect these possible solutions and discuss them in the group"}
             ]'
+            squirrel-left="smile"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
         </section>
         <section>
@@ -926,6 +950,8 @@
               {"leftOrRight":"right", "message":"Thank you for caring about our safety and sharing your idea with us"},
               {"leftOrRight":"right", "message":"We will incorporate that when we make come up with a plan"}
               ]'
+            squirrel-left="smile"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
         </section>
         <section>
@@ -945,6 +971,8 @@
           {"leftOrRight":"right", "message":"I think we all agree that we had not enough food last winter"},
           {"leftOrRight":"right", "message":"... and that we should make a plan for next winter as soon as possible"}
           ]'
+            squirrel-left="thinking"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
         </section>
 
@@ -961,9 +989,10 @@
           {"leftOrRight":"right", "message":"I think you are underestimating the effort"},
           {"leftOrRight":"right", "message":"I think we should instead just spend the time collecting more food"},
           {"leftOrRight":"left", "message":"I don`t think the other squirrels will enjoy collecting food when they know that so much will be stolen"},
-          {"leftOrRight":"right", "message":"I don`t think they will enjoy building new hiding places either"},
-          {"leftOrRight":"left", "message":"..."}
+          {"leftOrRight":"right", "message":"I don`t think they will enjoy building new hiding places either"}
           ]'
+            squirrel-left="annoyed"
+            squirrel-right="talking-angry"
           ></squirrel-conversation>
           <p>
             As long as no one is willing to depart from their own view and is
@@ -991,6 +1020,8 @@
               {"leftOrRight":"right", "message":"Actually, I agree"},
               {"leftOrRight":"right", "message":"Let ask the mice for help"}
               ]'
+            squirrel-left="neutral"
+            squirrel-right="talking-smile"
           ></squirrel-conversation>
         </section>
         <section>
@@ -1026,6 +1057,8 @@
             {"leftOrRight":"right", "message":"I can tell you right now that this won`t work"},
             {"leftOrRight":"right", "message":"You always come up with these crazy ideas but don`t know what you are talking about"}
             ]'
+            squirrel-left="annoyed"
+            squirrel-right="talking-annoyed"
           ></squirrel-conversation>
           <p>
             In this example "this won`t work" and your accusation "you don't
@@ -1052,6 +1085,8 @@
             {"leftOrRight":"right", "message":"I agree that we need to make a plan but I am not convinced building new hiding places is the best solution"},
             {"leftOrRight":"right", "message":"Let`s collect these possible solutions and discuss them in the group"}
             ]'
+            squirrel-left="thinking"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
         </section>
 
@@ -1085,6 +1120,8 @@
           {"leftOrRight":"right", "message":"But, I think building new hiding places will be a lot of effort and keeping them secret will be hard"},
           {"leftOrRight":"right", "message":"Instead, I think we should focus this additional energy on collecting more food"}
           ]'
+            squirrel-left="thinking"
+            squirrel-right="talking-neutral"
           ></squirrel-conversation>
           <takeaway-block>
             The Principle of Charity is not about agreeing with other people and
@@ -1152,10 +1189,8 @@
               alt=""
               style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
             />
-            <div>
-              Feel free to share & adapt to your needs 💚
-            </div>
           </p>
+          <div>Feel free to share & adapt to your needs 💚</div>
         </section>
         <!-- <section>
           <important-block>Why?</important-block>
@@ -1412,7 +1447,10 @@
         <div style="display: flex; justify-content: space-between; gap: 3rem">
           <div style="height: 8rem" class="squirrel-left"></div>
           <div style="position: relative">
-            <div style="height: 8rem; transform: scale(-1, 1)" class="squirrel-right"></div>
+            <div
+              style="height: 8rem; transform: scale(-1, 1)"
+              class="squirrel-right"
+            ></div>
             <div
               style="
                 position: absolute;

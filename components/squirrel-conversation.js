@@ -17,8 +17,8 @@ class SquirrelConversation extends HTMLElement {
   messages = [];
   positiveOrNegative = null;
   squirrelImage = {
-    'left': 'neutral',
-    'right': 'neutral',
+    'left': 'null',
+    'right': 'null',
   }
 
   constructor() {
