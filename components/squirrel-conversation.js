@@ -1,6 +1,6 @@
 const colors = {
-  green: "#2c6c1280",
-  blue: "#114b6780",
+  green: "hsl(103, 27.00%, 45.70%)",
+  blue: "hsl(200, 32.10%, 41.00%)",
 };
 
 // material-symbols:thumb-up-rounded
@@ -45,7 +45,7 @@ class SquirrelConversation extends HTMLElement {
     speechBubbleContainer.innerHTML = "";
     // Add messages
     this.messages.forEach((messageObject) => {
-      const speechBubble = document.createElement("speech-bubble");
+      const speechBubble = document.createElement("with-background");
       const container = document.createElement("div");
       container.style.display = "flex";
       container.style.gap = ".5rem";
@@ -55,7 +55,7 @@ class SquirrelConversation extends HTMLElement {
       speechBubble.textContent = messageObject.message;
       speechBubble.setAttribute(
         "color",
-        messageObject.leftOrRight === "left" ? "green" : "blue"
+        messageObject.leftOrRight === "left" ? colors.green : colors.blue
       );
       container.style.paddingLeft =
         messageObject.leftOrRight === "left" ? "0" : "4rem";

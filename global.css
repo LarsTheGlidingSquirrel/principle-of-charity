@@ -4,12 +4,7 @@
 
 h1, h2, h3, h4, h5 {
 	font: inherit;
-}
-
-.two-column-with-wrap {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
+	margin: 0;
 }
 
 section {
@@ -26,15 +21,6 @@ section {
 
 p {
 	text-align: center;
-}
-
-.emphasis-block {
-	background-color: hsl(26, 39.5%, 55.3%);
-	border-radius: 5px;
-	text-align: center;
-	padding: .7rem;
-	color: white;
-	font-size: medium;
 	margin: 0;
 }
 
@@ -42,11 +28,6 @@ p {
 	border: 3px solid hsl(26, 39.5%, 55.3%);
 	padding: 10px;
 	border-radius: 5px;
-}
-
-
-p {
-	margin: 0
 }
 
 .flex-item {
@@ -60,10 +41,4 @@ p {
 	/* background-color: hsla(26, 39.5%, 55.3%, 0.1); */
 	padding: 1rem;
 	text-align: center;
-}
-
-@media only screen and (max-width: 40rem) {
-	.two-column-with-wrap {
-		flex-direction: column;
-	}
 }

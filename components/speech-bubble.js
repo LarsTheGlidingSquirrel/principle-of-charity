@@ -28,13 +28,10 @@ class SpeechBubble extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === "color" && oldValue !== newValue) {
-      const backgrounds = this.shadowRoot.querySelectorAll(
-        ".speech-bubble-background"
+      const withBackgroundElement = this.shadowRoot.querySelector(
+        "with-background"
       );
-      backgrounds.forEach(
-        (background) => (background.style.backgroundColor = colors[newValue])
-        // (background) => (background.style.borderColor = colors[newValue])
-      );
+      withBackgroundElement.setAttribute('color', colors[newValue])
     }
   }
 
