@@ -27,6 +27,7 @@
     <script src="components/important-block.js" type="module"></script>
     <script src="components/takeaway-block.js" type="module"></script>
     <script src="components/with-background.js" type="module"></script>
+    <script src="components/three-dots.js" type="module"></script>
   </head>
 
   <body
@@ -35,6 +36,7 @@
       margin: 0;
       background-color: #f8f2f2ff;
       font-family: 'Roboto Slab';
+      --blue: #114b67;
     "
   >
     <!-- minmax(X, Y) - Below X a horizontal scroll bar will appear. Above Y empty space will be added to the left and right of the content. -->
@@ -68,7 +70,12 @@
               Principle of Charity
             </h2>
           </div>
-          <div>When somebody says something, I will ...</div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            When somebody says something, I will
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+          </div>
           <with-background>
             <h3>
               Remember there are <b>many possible ways to interpret</b> what was
@@ -100,11 +107,22 @@
               off than before
             </h3>
           </with-background>
-          <p>To help ...</p>
-          <div style="display: flex; flex-direction: row; gap: 10px">
-            <div class="summary-box">Reduce misunderstandings & conflict</div>
-            <div class="summary-box">Build trust and respect</div>
-            <div class="summary-box">Make conversations more constructive</div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            To help
+            <div style=" height: .6rem;">
+              <three-dots color="var(--blue)" />
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; justify-content: center;">
+            <with-background class="summary-box" color="var(--blue)">
+              Reduce misunderstandings & conflict
+            </with-background>
+            <with-background class="summary-box" color="var(--blue)">
+              Build trust and respect
+            </with-background>
+            <with-background class="summary-box" color="var(--blue)">
+              Make conversations more constructive
+            </with-background>
           </div>
           <div
             style="
@@ -161,7 +179,7 @@
           <!-- TODO: Add exercise "What do you think Charly wants to say? Imagine different ways he might say it an different contexts" -->
           <div
             style="
-              gap: 1rem;
+              gap: 4rem;
               display: flex;
               flex-direction: column;
               align-items: center;
@@ -239,7 +257,7 @@
                 involved in the planning</thought-bubble
               >
             </div>
-            <span style="padding-top: 4rem">...</span>
+            <div style="height: .6rem; width: 3rem;"><three-dots color="var(--blue)" /></div>
           </div>
         </section>
         <section>
@@ -601,14 +619,12 @@
             <span slot="above">The Principle of Charity says ...</span>
             Be charitable when you interpret others
           </important-block>
-          <paragraph-block
-            >... to help make the conversation more constructive and to build
-            trust & respect.</paragraph-block
-          >
-          <paragraph-block
-            >... to help everyone leave the conversation better off than
-            before.</paragraph-block
-          >
+          <p>
+            ... to help make the conversation more constructive and to build trust & respect
+            </p>
+          <p>
+            ... to help everyone leave the conversation better off than before
+          </p>
         </section>
         <section>
           <div class="heading">Assume good intentions</div>
@@ -775,11 +791,36 @@
             Try to make everyone involved in the conversation leave better off
             than before
           </takeaway-block>
-          <p>Being "better off" can mean many things like ...</p>
-          <p>- You feel heard & respected & that you have an impact</p>
-          <p>- You have a better understanding of the topic or other views</p>
-          <p>- You made progress towards a solution or even found one</p>
-          <p>- You learned something valuable to you</p>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            Being "better off" can mean many things like 
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+            You feel heard & respected & that you have an impact 
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+            You have a better understanding of the topic or other views
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+            You made progress towards a solution or even found one 
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+            You learned something valuable to you
+          </div>
         </section>
         <section>
           <!-- <div class="heading">Be constructive</div>
@@ -878,21 +919,41 @@
         <section>
           <div class="heading">Accept uncertainty</div>
           <p>Im most things we do there will be uncertainty</p>
-          <p>We can never be 100% sure that:</p>
-          <p>- How we interpret others aligns with reality</p>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div>We can never be 100% sure that</div>
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+            How we interpret others aligns with reality
+          </div>
           <!-- TODO: Find better example -->
           <thought-bubble style="max-width: 20rem"
             >I think Charly wants to be involved in the planning because he
             really cares about our safety. I am going to invite him to our next
             planning session but there is a chance he might not be interested.
           </thought-bubble>
-          <p>- What we say is constructive</p>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+            What we say is constructive
+          </div>
           <thought-bubble style="max-width: 20rem"
             >I will suggest we talk about this idea when the others can join as
             well. But there is a chance that Charly will feel disappointed by
             that.
           </thought-bubble>
-          <p>- A solution will make things better</p>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+           A solution will make things better
+          </div>
           <squirrel-conversation
             positive-or-negative="positive"
             messages='[
@@ -1173,6 +1234,9 @@
           <p>
             Remembering a conversation months ago might help with interpreting what someone wants to communicate right now
           </p>
+          <p>
+            But, be open to change because people likely change over time
+          </p>
           <!-- <p>
             Even if you already felt like you understood what the other wants to say there is always more to learn
           </p> -->
@@ -1377,6 +1441,14 @@
       </main>
     </div>
 
+    <template id="three-dots-template">
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+      </style>
+      <div class="container" style="height: 100%"></div>
+    </template>
     <template id="takeaway-block-template">
       <style>
         * {
