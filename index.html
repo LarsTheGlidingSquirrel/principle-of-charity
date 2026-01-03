@@ -37,6 +37,9 @@
       background-color: #f8f2f2ff;
       font-family: 'Roboto Slab';
       --blue: #114b67;
+      --yellow: #f0d999;
+      --red: #cf6c6c;
+      --green: #558963;
     "
   >
     <!-- minmax(X, Y) - Below X a horizontal scroll bar will appear. Above Y empty space will be added to the left and right of the content. -->
@@ -56,7 +59,7 @@
       >
         <section id="principle-of-charity">
           <div
-            style="display: flex; flex-direction: column; align-items: center"
+            style="display: flex; flex-direction: column; align-items: center; width: 100%"
           >
             <span>The</span>
             <h2
@@ -69,6 +72,12 @@
             >
               Principle of Charity
             </h2>
+            <div style="display: flex; flex-direction: row; gap: 20px; justify-content: space-between; color: hsl(0, 0%, 32%); font-size: small; margin-top: .5rem; text-align: center;">
+              <span><span style="color: var(--green); font-weight: 900;">~</span> benefit of the doubt</span>
+              <span><span style="color: var(--green); font-weight: 900;">~</span> in good faith</span>
+              <span><span style="color: var(--green); font-weight: 900;">~</span> constructive communication</span>
+              <span><span style="color: var(--green); font-weight: 900;">~</span> empathy</span>
+            </div>
           </div>
           <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
             When somebody says something, I will
@@ -113,16 +122,24 @@
               <three-dots color="var(--blue)" />
             </div>
           </div>
-          <div style="display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; justify-content: center;">
-            <with-background class="summary-box" color="var(--blue)">
-              Reduce misunderstandings & conflict
-            </with-background>
-            <with-background class="summary-box" color="var(--blue)">
-              Build trust and respect
-            </with-background>
-            <with-background class="summary-box" color="var(--blue)">
-              Make conversations more constructive
-            </with-background>
+          <div>
+            <div style="display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; justify-content: center;">
+              <with-background class="summary-box" color="var(--blue)">
+                Reduce misunderstandings & conflict
+              </with-background>
+              <with-background class="summary-box" color="var(--blue)">
+                Build trust and respect
+              </with-background>
+              <with-background class="summary-box" color="var(--blue)">
+                Make conversations more constructive
+              </with-background>
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 20px; justify-content: center; color: hsl(0, 0%, 32%); font-size: small; margin-top: .5rem; text-align: center;">
+              <span><span style="color: var(--red)">✗</span> us-vs-them</span>
+              <span><span style="color: var(--red)">✗</span> polarization</span>
+              <span><span style="color: var(--red)">✗</span> black and white thinking</span>
+              <span><span style="color: var(--red)">✗</span> putting people in boxes</span>
+            </div>
           </div>
           <div
             style="
