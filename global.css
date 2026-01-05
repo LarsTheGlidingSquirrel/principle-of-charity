@@ -41,7 +41,7 @@ three-dots {
 	display: flex; 
 	flex-direction: column; 
 	align-items: center;
-	gap: 1rem; 
+	gap: 3rem; 
 	/* border-radius: 5px; */
 	/* background-color: hsla(26, 39.5%, 55.3%, 0.1); */
 	padding: 1rem;
