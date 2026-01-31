@@ -35,6 +35,21 @@ three-dots {
 	display: block;
 }
 
+thought-bubble textarea {
+	resize: none;
+	width: 100%;
+	background-color: unset; 
+	font: inherit; 
+	color: inherit; 
+	border: 0px;
+	field-sizing: content;
+	max-width: 100%;
+}
+
+thought-bubble textarea::placeholder {
+	color: hsl(0, 0%, 84%)
+}
+
 .flex-item {
 	flex-basis: 23rem; 
 	flex-grow: 1; 
@@ -46,4 +61,8 @@ three-dots {
 	/* background-color: hsla(26, 39.5%, 55.3%, 0.1); */
 	padding: 1rem;
 	text-align: center;
+}
+
+.mode-interactive {
+	/* display: none; */
 }

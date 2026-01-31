@@ -193,7 +193,9 @@
             squirrel-left="talking-neutral"
             squirrel-right="thinking"
           ></squirrel-conversation>
-          <!-- TODO: Add exercise "What do you think Charly wants to say? Imagine different ways he might say it an different contexts" -->
+          <p class="mode-interactive">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--blue)" d="M21.911 7.142a7.45 7.45 0 0 0-5.07-5.07a2 2 0 0 0-1 0a2 2 0 0 0-.87.52l-2.23 2.24l-9.54 9.53a2.1 2.1 0 0 0-.56 1.14l-.61 4.16a2.1 2.1 0 0 0 .07.93c.102.3.27.573.49.8c.224.222.494.392.79.5c.207.068.423.101.64.1h.29l4.16-.61a2 2 0 0 0 1.15-.56l9.55-9.55l2.22-2.21a2 2 0 0 0 .54-1.92zm-1.46.63a.5.5 0 0 1-.14.22l-1.69 1.69l-4.32-4.31l1.71-1.71a.6.6 0 0 1 .23-.13h.23a5.94 5.94 0 0 1 4 4a.6.6 0 0 1-.02.24"/></svg>
+            What do you think Charly wants to communicate?</p>
           <div
             style="
               gap: 4rem;
@@ -209,23 +211,68 @@
                 flex-direction: row;
                 gap: 2rem;
                 flex-wrap: wrap;
+                width: 100%;
               "
+              class="mode-interactive"
             >
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="mode-interactive"
+                >
+                <textarea placeholder="Type here"></textarea>
+              </thought-bubble>
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                class="mode-interactive"
+                >
+                <textarea placeholder="Type here"></textarea>
+              </thought-bubble>
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                class="mode-interactive"
+                >
+                <textarea placeholder="Type here"></textarea>
+              </thought-bubble>
+            </div>
+            <div class="mode-interactive" >
+              Here are some examples
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                flex-wrap: wrap;
+              "
+            >
+              <!-- <div style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1; display: flex; align-items: center; justify-content: center;" class="mode-interactive">
+                <button class="show-me-answers-button" type="button" onclick="document.querySelectorAll('.interpreting-charly-thought')">Show me some answers!</button>
+              </div> -->
+              <!-- <div style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1; display: flex; align-items: center; justify-content: center;" onclick="">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 3rem" viewBox="0 0 256 256"><g fill="none" stroke="var(--blue)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"><circle cx="128" cy="128" r="112"/><path d="M 79.999992,128 H 176.0001"/><path d="m 128.00004,79.99995 v 96.0001"/></g>
+                </svg>
+              </div> -->
+              <thought-bubble
+                style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
+                color="green"
+                class="interpreting-charly-thought"
                 >Charly wants squirrels to stand guard in winter
                 <span slot="heading">Consequence</span></thought-bubble
               >
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 >Charly wants me to feel bad because my stash got robbed
                 <span slot="heading">Attack</span></thought-bubble
               >
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 >Yes, half of the food was lost but only a quarter was stolen -
                 The rest rotted like we expected
                 <span slot="heading">Mistake</span></thought-bubble
@@ -233,6 +280,7 @@
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 >There is a group that wants to prohibit all forms of sharing
                 food with others - Charly probably belongs to them<span
                   slot="heading"
@@ -242,6 +290,7 @@
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 >Charly is curious to know what I think<span slot="heading"
                   >Curious</span
                 ></thought-bubble
@@ -249,6 +298,7 @@
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 >Charly just wants to sound smart in front of the others<span
                   slot="heading"
                   >Self display</span
@@ -257,6 +307,7 @@
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 ><span slot="heading">Care</span>Charly cares about our safety
                 during the next winter and wants us to make a
                 plan</thought-bubble
@@ -264,12 +315,14 @@
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 ><span slot="heading">Fear</span>Charly had a tough winter and
                 fears the next one</thought-bubble
               >
               <thought-bubble
                 style="flex-basis: 15rem; flex-shrink: 1; flex-grow: 1"
                 color="green"
+                class="interpreting-charly-thought"
                 ><span slot="heading">Involvement</span>Charly wants to be
                 involved in the planning</thought-bubble
               >
@@ -1578,7 +1631,6 @@
               padding-left: 2rem;
               padding-bottom: 1rem;
               padding-right: 2rem;
-              align-self: flex-start;
               text-align: left;
             "
           >
