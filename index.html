@@ -28,6 +28,7 @@
     <script src="components/takeaway-block.js" type="module"></script>
     <script src="components/with-background.js" type="module"></script>
     <script src="components/three-dots.js" type="module"></script>
+    <script src="components/reader-exercise.js" type="module"></script>
   </head>
 
   <body
@@ -193,9 +194,9 @@
             squirrel-left="talking-neutral"
             squirrel-right="thinking"
           ></squirrel-conversation>
-          <p class="mode-interactive">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--blue)" d="M21.911 7.142a7.45 7.45 0 0 0-5.07-5.07a2 2 0 0 0-1 0a2 2 0 0 0-.87.52l-2.23 2.24l-9.54 9.53a2.1 2.1 0 0 0-.56 1.14l-.61 4.16a2.1 2.1 0 0 0 .07.93c.102.3.27.573.49.8c.224.222.494.392.79.5c.207.068.423.101.64.1h.29l4.16-.61a2 2 0 0 0 1.15-.56l9.55-9.55l2.22-2.21a2 2 0 0 0 .54-1.92zm-1.46.63a.5.5 0 0 1-.14.22l-1.69 1.69l-4.32-4.31l1.71-1.71a.6.6 0 0 1 .23-.13h.23a5.94 5.94 0 0 1 4 4a.6.6 0 0 1-.02.24"/></svg>
-            What do you think Charly wants to communicate?</p>
+          <reader-exercise>
+            What do you think Charly wants to communicate?
+          </reader-exercise>
           <div
             style="
               gap: 4rem;
@@ -401,7 +402,9 @@
             If we first allow other possibilities, we probably realize we are
             not quite so sure any more about or initial interpretations
           </takeaway-block>
-          <!-- TODO: Add exercise: "Think about a situation where your initial interpretation was wrong. Did you respond to quickly?" -->
+          <reader-exercise>
+            Think about a situation where you misunderstood what somebody wanted to communicate. Did you respond too quickly?
+          </reader-exercise>
         </section>
         <section>
           <important-block>
@@ -494,6 +497,9 @@
             Asking questions is often the best approach to figure out what
             somebody wants to communicate
           </takeaway-block>
+          <reader-exercise>
+            Next time you talk to someone try to ask them to explain in more detail what they want to communicate and observe what it does to the conversation.
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">Listen</div>
@@ -508,6 +514,9 @@
             Also try to pay attention to body language, tone, ... which can make
             up a big part of what somebody is trying to communicate.
           </p>
+          <reader-exercise>
+            Next time you talk to someone try to notice moments where your mind stops listening and is occupied with other things.   
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">Think</div>
@@ -549,15 +558,29 @@
             squirrel-left="neutral"
             squirrel-right="talking-neutral"
           ></squirrel-conversation>
-          <p>Also, pausing a conversation can be helpful in many ways:</p>
-          <p>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            Also, pausing a conversation can be helpful because 
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: end; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
             You might come back to a conversation with new energy and a fresh
             perspective
-          </p>
-          <p>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: center; gap: .4rem;">
+            <div style=" height: .6rem;">
+              <three-dots />
+            </div>
             When a conversation became emotional (for example anger building up)
             having a pause can give some room for these emotions to settle
-          </p>
+          </div>
+          <reader-exercise>
+            Try to remember a conversation that might have benefited from taking a break
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">Get help from others</div>
@@ -716,6 +739,9 @@
             Even if you know for sure they have malicious intentions, don't
             respond by being malicious yourself. Instead, set clear boundaries.
           </p>
+          <reader-exercise>
+            Who are you thinking negatively about right now? Try to find good intentions that could explain their behavior.
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">Practice empathy</div>
@@ -729,6 +755,9 @@
             have been this tough, I would probably also stand here and talk like
             this.
           </thought-bubble>
+          <reader-exercise>
+            Think of another person who is very different to you and try to imagine in detail how they live their day, what motivates them, what challenges they face, what they feel, ...
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">Don't reject their view</div>
@@ -929,6 +958,9 @@
           <takeaway-block>
             Having a clear goal for interacting with each other helps make conversations be more constructive
           </takeaway-block>
+          <reader-exercise>
+            Next time you talk to someone try to notice what you want to get out of the conversation 
+          </reader-exercise>
         </section>
         <section>
           <!-- <div class="heading">Be constructive</div>
@@ -981,6 +1013,9 @@
             Otherwise the solutions you come up with might not address the
             problem well
           </p>
+          <reader-exercise>
+            Try to remember a conversation that dwelled too long on problems and not enough on solutions
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">Strive for better instead of perfect</div>
@@ -1121,6 +1156,9 @@
             squirrel-left="smile"
             squirrel-right="talking-neutral"
           ></squirrel-conversation>
+          <reader-exercise>
+            Try to remember a conversation where there were clearly two sides and arguments were merely about strengthening your own side and weakening the other side. How do you think this conversation could have been more constructive? 
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">Make others feel respected and heard</div>
@@ -1207,6 +1245,9 @@
             squirrel-left="neutral"
             squirrel-right="talking-smile"
           ></squirrel-conversation>
+          <reader-exercise>
+            Try to remember person that changed their view based on something you said
+          </reader-exercise>
         </section>
         <section>
           <div class="heading">
@@ -1679,6 +1720,18 @@
           <slot></slot>
         </div> -->
       </div>
+    </template>
+    <template id="reader-exercise-template">
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+      </style>
+      <p class="mode-interactive">
+        <!-- Pen icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="var(--blue)" d="M21.911 7.142a7.45 7.45 0 0 0-5.07-5.07a2 2 0 0 0-1 0a2 2 0 0 0-.87.52l-2.23 2.24l-9.54 9.53a2.1 2.1 0 0 0-.56 1.14l-.61 4.16a2.1 2.1 0 0 0 .07.93c.102.3.27.573.49.8c.224.222.494.392.79.5c.207.068.423.101.64.1h.29l4.16-.61a2 2 0 0 0 1.15-.56l9.55-9.55l2.22-2.21a2 2 0 0 0 .54-1.92zm-1.46.63a.5.5 0 0 1-.14.22l-1.69 1.69l-4.32-4.31l1.71-1.71a.6.6 0 0 1 .23-.13h.23a5.94 5.94 0 0 1 4 4a.6.6 0 0 1-.02.24"/></svg>
+        <slot></slot>
+      </p>
     </template>
     <template id="squirrel-conversation-template">
       <style>
