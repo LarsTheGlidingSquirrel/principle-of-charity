@@ -30,6 +30,7 @@
     <script src="components/with-background.js" type="module"></script>
     <script src="components/three-dots.js" type="module"></script>
     <script src="components/reader-exercise.js" type="module"></script>
+    <script src="components.js" type="module"></script>
   </head>
 
   <body
@@ -44,21 +45,7 @@
       --green: #558963;
     "
   >
-    <!-- minmax(X, Y) - Below X a horizontal scroll bar will appear. Above Y empty space will be added to the left and right of the content. -->
-    <div
-      style="display: grid; grid-template-columns: 1fr minmax(20rem, 64rem) 1fr"
-    >
-      <main
-        style="
-          grid-column-start: 2;
-          grid-column-end: 3;
-          padding: 2rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 18rem; /* Sections gap */
-        "
-      >
+    <layout-main>
         <section id="principle-of-charity">
           <div
             style="display: flex; flex-direction: column; align-items: center; width: 100%"
@@ -1588,8 +1575,7 @@
             communication.</paragraph-block
           >
         </section> -->
-      </main>
-    </div>
+    </layout-main>
 
     <template id="three-dots-template">
       <style>
